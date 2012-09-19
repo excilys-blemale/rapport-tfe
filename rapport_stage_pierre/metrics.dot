@@ -1,0 +1,15 @@
+digraph G {
+	node[shape="box"]
+	gatling [label="Gatling",shape="diamond"]
+	datawriter [label="MetricsDataWriter"]
+	map [label="Map requête -> acteur"]
+	requestmetrics1 [label = "RequestMetrics"]
+	requestmetrics2 [label = "RequestMetrics"]
+	etc [label = "...",shape="none"]
+
+	gatling -> datawriter[label="  le résultat d'une nouvelle\n requête arrive"]
+	datawriter -> map [label= "  de quel requête s'agit-il ?"]
+	map -> requestmetrics1 [label="  requête 1"]
+	map -> requestmetrics2 [label="  requête 2"]
+	map -> etc [label="  requête x"]
+}

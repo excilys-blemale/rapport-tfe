@@ -1,0 +1,115 @@
+\documentclass[a4paper,twoside,12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{url}
+\usepackage{pdfpages}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{wrapfig}
+\usepackage[left=2cm, right=2cm, top=2.75cm, bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[pdftex]{hyperref}
+\usepackage{eurosym}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{insa}
+\usepackage{todonotes}
+\usepackage{listings}
+
+\lstdefinelanguage{scala}{
+  morekeywords={abstract,case,catch,class,def,%
+  do,else,extends,false,final,finally,%
+  for,if,implicit,import,match,mixin,%
+  new,null,object,override,package,%
+  private,protected,requires,return,sealed,%
+  super,this,throw,trait,true,try,%
+  type,val,var,while,with,yield},
+  otherkeywords={=>,<-,<\%,<:,>:,\#,@},
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[n]{/*}{*/},
+  morestring=[b]",
+  morestring=[b]',
+  morestring=[b]"""
+}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+% Default settings for code listings
+\lstset{frame=tb,
+  language=scala,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  frame=single,
+  breaklines=true,
+  breakatwhitespace=true
+  tabsize=3,
+  numbers=left,
+  numberstyle=\tiny\color{gray}
+}
+
+\hypersetup{
+	unicode=false,
+	colorlinks=true,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black
+}
+
+\newcommand{\excilys}{Excilys}
+\newcommand{\excilysGroup}{Groupe \excilys{}}
+\newcommand{\ebi}{eBusiness Information}
+\newcommand{\capico}{Capico}
+
+\begin{document}
+
+\pageDeGarde[cover.pdf]{Stage ingénieur}{Évolution du système d'information du \excilysGroup}{Tuteur école :\\Stéphane CANU\\Tuteur entreprise :\\François-Pierre CHALOPIN}{Grégory COUTANT}
+
+\pagestyle{fancyplain}
+\fancyhf{}
+
+\pageINSA[twoside]
+
+\setcounter{page}{1}
+
+\input{chapitres/0_remerciements}
+
+\newpage
+\pdfbookmark[0]{Table des matières}{toc}
+\tableofcontents
+
+\input{chapitres/1_introduction}
+
+\input{chapitres/2_entreprise}
+
+\input{chapitres/3_sujet}
+
+\input{chapitres/4_travail}
+
+\input{chapitres/5_conclusion}
+
+\input{chapitres/6_bibliographie}
+
+\input{chapitres/7_annexes}
+
+\input{chapitres/8_resume}
+
+\end{document}
+

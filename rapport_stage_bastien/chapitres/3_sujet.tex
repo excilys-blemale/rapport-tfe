@@ -1,0 +1,34 @@
+\chapter{Présentation du stage}
+
+\section{Sujet du stage}
+
+Le sujet du stage, tel qu'il est défini dans la convention :\\
+
+\emph{Évolutions de systèmes d'informations Java/JEE : Le stagiaire participera au développement de notre système d'information ou à celui de l'un de nos clients dans les technologies Java/JEE. Il sera d'abord formé à l'utilisation de différents outils et frameworks, puis les mettra en \oe{}uvre dans le cadre du projet auquel il participera sous la conduite d'un architecte logiciel.}\\
+
+Le \excilysGroup{} recrutant exclusivement après un stage ingénieur effectué au sein d'\ebi{}, les stages proposés contiennent une importante partie de formation. Cette formation permet de garantir son engagement d'excellence technique auprès de ses clients. Une première partie du stage, durant deux mois, est donc consacré à la formation. Pendant la seconde partie, les stagiaires sont amenés à participer à des projets internes.
+
+\section{La formation}
+
+La première partie de mon stage a donc été une période de formation durant environ deux mois. Durant cette période, les stagiaires utilisent la plateforme d'e-learning Capico, dans laquelle un grand nombre de technologies et de frameworks Java/JEE sont abordés sous forme de cours, de QCM et d'exercices pour la mise en pratique des technologies étudiées.\\
+
+Cette partie de formation sur Capico, d'une duré d'un mois, m'a permis d'étudier en profondeur le langage Java, la plateforme JavaEE et de nombreux outils et frameworks utilisés dans le monde de l'entreprise tels que Spring, Hibernate, Maven, Subversion, Log4J, \dots{} De plus, des méthodes de gestion de projets Agiles ont été abordées telles que Scrum et l'eXtreme Programming (XP).\\
+
+Pendant le mois suivant, les connaissances fraîchement apprises sont mises en pratique dans un mini-projet consistant en la réalisation d'une application web d'e-banking. Ce mini-projet est réalisé en groupe de plusieurs stagiaires sous la tutelle de Stéphane LANDELLE, directeur technique d'\ebi{}. Il intervient à la fois comme client de notre application, et comme référent technique.
+
+Dans le but d'assurer aux clients le bon niveau technique de ses consultant, \ebi{} demande à ses stagiaires de passer la certification Oracle Certified Java Programmer. J'ai donc en parallèle de la formation préparé celle-ci et réussi à obtenir le score de 91\%, 61\% étant suffisant pour l'obtenir. 
+
+\section{Gatling}
+
+Après cette phase de formation, j'ai été amené à travailler sur le projet Gatling pendant une durée de quatre mois. Gatling est une application permettant d'effectuer des tests de charge sur des applications web. Elle est principalement développée par Stéphane LANDELLE et est open source dans sa majeure partie. Cette application est notamment utilisée lors d'audits techniques d'applications réalisés par \ebi{}.\\
+
+Mon travail en collaboration avec deux autres stagiaires a consisté à réalisé un état de l'art de plusieurs technologies pour évaluer la faisabilité de nouvelles fonctionnalités à ajouter à Gatling. Puis de développer certaines d'entre elles. Ces fonctionnalités sont :
+
+\begin{itemize}
+	\item Récupération de métriques du serveur contenant l'application en test pour les mettre en relation avec les métriques du côté client, générée par Gatling,
+	\item Exposition en temps réel des métriques mesurées par Gatling vers un système tierce de monitoring temps réel,
+	\item Amélioration du système de génération de rapport pour pouvoir générer des rapports lors de tests produisant une grande quantité de données brutes (~ 10 Go).
+	\item Réalisation d'un plugin Jenkins pour suivre une simulation Gatling au sein d'un projet et ainsi pouvoir de déterminer des conditions d'échec ou d'instabilité du build en fonction des résultats des tests de charge et d'afficher l'évolution des performances.\\
+\end{itemize}
+
+En parallèle, je me suis formé sur les technologies utilisées par Gatling que sont le langage de programmation multi-paradigme Scala ainsi que le framework Akka.

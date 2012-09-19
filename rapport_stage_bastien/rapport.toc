@@ -1,0 +1,72 @@
+\select@language {french}
+\contentsline {chapter}{Remerciements}{1}{chapter*.1}
+\contentsline {chapter}{Introduction}{4}{chapter*.3}
+\contentsline {chapter}{\numberline {1}Pr\IeC {\'e}sentation de l'entreprise}{5}{chapter.1}
+\contentsline {section}{\numberline {1.1}Le Groupe Excilys{}{}}{5}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Historique du groupe}{5}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}La soci\IeC {\'e}t\IeC {\'e} eBusiness Information{}}{5}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Les autres entit\IeC {\'e}s du groupe}{8}{subsection.1.1.3}
+\contentsline {section}{\numberline {1.2}L'organisation de l'entreprise}{9}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Le service \IeC {\'e}quitable - La charte Excilys{}}{9}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Le syst\IeC {\`e}me d'information du groupe}{10}{subsection.1.2.2}
+\contentsline {chapter}{\numberline {2}Pr\IeC {\'e}sentation du stage}{12}{chapter.2}
+\contentsline {section}{\numberline {2.1}Sujet du stage}{12}{section.2.1}
+\contentsline {section}{\numberline {2.2}La formation}{12}{section.2.2}
+\contentsline {section}{\numberline {2.3}Gatling}{13}{section.2.3}
+\contentsline {chapter}{\numberline {3}Travail effectu\IeC {\'e}}{14}{chapter.3}
+\contentsline {section}{\numberline {3.1}La formation}{15}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Contenu}{15}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}D\IeC {\'e}roulement}{15}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Technologies abord\IeC {\'e}es}{16}{subsection.3.1.3}
+\contentsline {subsubsection}{eXtreme Programming (XP)}{17}{section*.10}
+\contentsline {subsubsection}{Maven}{17}{section*.11}
+\contentsline {subsubsection}{Java}{17}{section*.12}
+\contentsline {subsubsection}{JUnit}{17}{section*.13}
+\contentsline {subsubsection}{Java Enterprise Edition (JEE)}{18}{section*.14}
+\contentsline {subsubsection}{Java DataBase Connectivity (JDBC)}{18}{section*.15}
+\contentsline {subsubsection}{Hibernate}{18}{section*.16}
+\contentsline {subsubsection}{Spring}{18}{section*.17}
+\contentsline {subsection}{\numberline {3.1.4}Formation continue}{19}{subsection.3.1.4}
+\contentsline {section}{\numberline {3.2}Mini-projet d'e-banking}{20}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Cahier des charges}{20}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Gestion du projet}{20}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Choix techniques}{21}{subsection.3.2.3}
+\contentsline {subsubsection}{Gestionnaire de version}{21}{section*.18}
+\contentsline {subsubsection}{Construction du projet}{22}{section*.19}
+\contentsline {subsubsection}{Syst\IeC {\`e}me de Gestion de Base de Donn\IeC {\'e}es (SGBD)}{22}{section*.20}
+\contentsline {subsubsection}{ORM}{22}{section*.21}
+\contentsline {subsubsection}{Conteneur d'application}{22}{section*.22}
+\contentsline {subsubsection}{Serveur}{23}{section*.23}
+\contentsline {subsubsection}{Frameworks de tests}{23}{section*.24}
+\contentsline {subsubsection}{Serveur d'int\IeC {\'e}gration}{24}{section*.25}
+\contentsline {subsubsection}{Framework de web services}{24}{section*.26}
+\contentsline {subsubsection}{Autres technologies}{24}{section*.27}
+\contentsline {subsection}{\numberline {3.2.4}Architecture de l'environnement de d\IeC {\'e}veloppement}{25}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Architecture du projet}{25}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.6}It\IeC {\'e}rations}{26}{subsection.3.2.6}
+\contentsline {subsubsection}{It\IeC {\'e}ration 1}{27}{section*.29}
+\contentsline {subsubsection}{It\IeC {\'e}ration 2}{27}{section*.30}
+\contentsline {subsubsection}{It\IeC {\'e}ration 3}{27}{section*.31}
+\contentsline {subsubsection}{It\IeC {\'e}ration 4}{27}{section*.32}
+\contentsline {subsection}{\numberline {3.2.7}Produit final}{28}{subsection.3.2.7}
+\contentsline {section}{\numberline {3.3}Gatling}{30}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Pr\IeC {\'e}sentation du projet}{30}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Scala}{31}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Akka}{32}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}R\IeC {\'e}cup\IeC {\'e}ration des m\IeC {\'e}triques serveurs}{32}{subsection.3.3.4}
+\contentsline {subsubsection}{Java Management eXtensions}{33}{section*.36}
+\contentsline {subsubsection}{Agent Java}{35}{section*.38}
+\contentsline {subsubsection}{Sigar}{35}{section*.39}
+\contentsline {subsubsection}{Metrics}{35}{section*.40}
+\contentsline {subsubsection}{Notre solution}{36}{section*.41}
+\contentsline {subsection}{\numberline {3.3.5}Exposition des m\IeC {\'e}triques Gatling}{36}{subsection.3.3.5}
+\contentsline {subsection}{\numberline {3.3.6}G\IeC {\'e}n\IeC {\'e}ration du rapport}{37}{subsection.3.3.6}
+\contentsline {subsubsection}{MapReduce}{37}{section*.42}
+\contentsline {subsubsection}{Apache Hadoop}{38}{section*.43}
+\contentsline {subsubsection}{Cascading et Scalding}{38}{section*.44}
+\contentsline {subsubsection}{D\IeC {\'e}veloppement de l'am\IeC {\'e}lioration}{41}{section*.47}
+\contentsline {subsubsection}{Conclusion}{41}{section*.48}
+\contentsline {chapter}{Conclusion}{42}{chapter*.49}
+\contentsline {chapter}{Bibliographie}{43}{chapter*.50}
+\contentsline {chapter}{\numberline {A}Charte Excilys{}}{44}{appendix.A}
+\contentsline {chapter}{R\IeC {\'e}sum\IeC {\'e}}{47}{appendix*.51}
