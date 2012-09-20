@@ -73,6 +73,7 @@
 	urlcolor=black
 }
 
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \newcommand{\excilys}{Excilys}
 \newcommand{\excilysGroup}{Groupe \excilys{}}
 \newcommand{\ebi}{eBusiness Information}
@@ -80,7 +81,33 @@
 
 \begin{document}
 
-\pageDeGarde[cover.pdf]{Travail de Fin d'Etude}{Évolution du système d'information du \excilysGroup}{Tuteur école :\\Myriam SERVIERES\\Tuteur entreprise :\\François-Pierre CHALOPIN}{Bastien LEMALE}
+\begin{titlepage}
+	\begin{center}
+		% Logo Paris Sud 11
+		\includegraphics[scale=0.60]{images/logo-ecn.pdf}
+				
+		\textsc{\Large Ecole Centrale de Nantes}\\[1.5cm]
+		\HRule \\[0.5cm]
+		\textsc{\LARGE Rapport de stage de fin d'études}
+		\\[0.5cm]
+		\HRule	 \\[1.5cm]
+		\begin{minipage}[t]{0.4\textwidth}
+			\begin{flushleft}
+				\emph{Auteur :}\\
+				Bastien LEMALE
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}[t]{0.4\textwidth}
+			\begin{flushright}
+				\emph{Tuteurs : }\\
+				François-Pierre CHALOPIN pour eBusiness Information\\
+				SMyriam SERVIERES pour l'Ecole Centrale de Nantes
+			\end{flushright}
+		\end{minipage}
+		\vfill
+		{\Large \today}
+	\end{center}
+\end{titlepage}
 
 \pagestyle{fancyplain}
 \fancyhf{}

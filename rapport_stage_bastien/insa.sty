@@ -8,24 +8,8 @@
 \definecolor{CP-MRIE}{cmyk}{0.3,0,1,0}
 \definecolor{GCCD}{cmyk}{0,0.5,1,0}
 
-\newcommand{\pageDeGarde}[5][rien]{
-\thispagestyle{empty}
-\begin{picture}(0,0)
-	%\put(-50,-425){\includegraphics[width=180mm]{images/{#1}}} %pour mettre une image de fond qui sera recouverte.
-	%\put(-72,-755){\includegraphics[width=210mm]{images/couverture.pdf}}
-	\put(140,-630){\color{BLEU}{\begin{minipage}{13cm}\huge \huge #2 \\ \Huge \textbf{#3} \end{minipage}}}
-	\put(-65,-630){\color{GRIS}\begin{minipage}{6.3cm} \Large \raggedleft #4 \end{minipage}}
-	\put(-520,-720){\color{GRIS}{\begin{minipage}{20.5cm} \raggedleft \Large \today\end{minipage}}}
-	\put(-72,-720){\color{GRIS}{\begin{minipage}{20.5cm} \raggedleft \Large #5\end{minipage}}}
-\end{picture}
-\newpage
-%\thispagestyle{empty}
-%\null
-%\newpage
-}
-
 \newcommand{\pageINSA}[1][]{
-\fancyhead[LO,LE]{\begin{picture}(0,0) \put(-57,-10){\includegraphics[scale=0.12]{images/logo-ecn.pdf}}\end{picture}}
+\fancyhead[LO,LE]{\begin{picture}(0,0) \put(-57,-28){\includegraphics[width=210mm]{images/header.pdf}}\end{picture}}
 \fancyhead[CO,CE]{}
 \fancyhead[RO,RE]{\begin{picture}(0,0)\put(-140,-10){\includegraphics[width=30mm]{images/excilys.pdf}}\put(-40,0){\includegraphics[width=30mm]{images/ebusiness.pdf}}\end{picture}}
 \fancyfoot[LE,LO,RE,RO]{}

@@ -10,49 +10,98 @@ Après le projet d'e-banking, j'ai rejoint, avec deux autres stagiaires, Stépha
 
 \subsection{Présentation du projet}
 
-Gatling est une application permettant d'effectuer des tests de charges sur des applications web. Elle a été créée par le directeur technique d'\ebi{}, Stéphane LANDELLE qui en est le responsable. La majeure partie de l'application est open source et disponible sous Apache License v2.0. La partie permettant de générer les rapports utilisant une librairie non open source, est disponible gratuitement mais il est interdit de modifier le code source ou d'utiliser des parties du code en dehors de Gatling.\\
+\subsubsection*{Qu'est-ce que Gatling ?}
 
-Le fonctionnement de l'application est très simple. L'utilisateur décrit des scénarii de tests dans un fichier à l'aide d'un DSL (Domain-Specific programming Language). Ces scénarii sont une suite de requêtes HTTP à envoyer à l'application web en test pour simuler un utilisateur naviguant dans l'application. Il suffit ensuite de spécifier le nombre d'utilisateurs à simuler. Gatling compile ensuite ce fichier pour exécuter les requêtes et enregistrer dans un journal les valeurs permettant, plus tard, de calculer des statistiques telles que le temps de réponse du serveur.\\
+Gatling \cite{gatling} est un outil permettant de réaliser des tests de charges, par exemple sur des applications web. Ce projet est dans sa grande majorité open-source. Il a été créé par Stéphane LANDELLE, directeur technique d'\ebi{}, en Janvier 2012 et est activement soutenu par le \excilysGroup{}.
 
-Lorsque tous les scénarii ont été exécutés, Gatling lit le journal, calcul plusieurs statistiques, notamment le temps de réponse du serveur et le nombre de requêtes par secondes, pour générer un rapport sous la forme de pages HTML contenant plusieurs graphiques permettant de représenter les résultats.\\
+Un outil de tests de charge permet de simuler le comportement d'un nombre arbitraire d'utilisateurs pour pouvoir tester le comportement d'une application face à une utilisation simultanée, proche des conditions d'utilisation réelles. Ce type d'outil a pour but de détecter les problèmes de performance d'une application avant sa mise en production.
 
-Le fichier décrivant les requêtes à exécuter sont écrits dans un langage de programmation qui n'est pas forcément facile à prendre en main pour tout le monde. C'est pourquoi, Gatling vient avec une application appelée le Gatling Recorder qui permet d'enregistrer les requêtes tout en naviguant sur l'application web avec un navigateur. Le Recorder fonctionne en tant que proxy pour le navigateur. Le scénario de test est donc la simulation de la navigation de l'utlisateur s'enregistrant avec le Recorder.\\
+\subsubsection*{Pourquoi avoir créé Gatling ?}
 
-Le projet est lui-même écrit en Scala, un langage de programmation multi-paradigme. Il utilise Akka une librairie Scala/Java permettant de créer des applications concurrentes facilement. Gatling repose sur d'autres librairies telles que Netty ou encore SLF4J.
+Avant la création de Gatling il existait déjà de nombreux injecteurs de charge comme :
 
-\begin{figure}[H]
+\begin{itemize}
+	\item JMeter
+	\item LoadUI
+	\item LoadRunner
+	\item The Grinder
+	\item etc\ldots \\
+\end{itemize}
+
+Alors pourquoi créer un nouvel outil ? Car aucun de ceux-ci n'avait satisfait Stéphane LANDELLE lors de ses différentes mission. Il a donc pensé qu'il y avait une place pour un nouvel injecteur qui répondrait à ses attentes.\\
+
+Les principaux inconvénients des solutions existantes sont :
+
+\begin{itemize}
+	\item Le cout de la licence pour les solutions payantes : 10000\$ dans le cas de LoadUI.
+	\item Le manque d'activité et de maintenance du projet par exemple pour The Grinder. 
+	\item Les problèmes de performance de certains outils qui demande donc une ou plusieurs machines très puissantes pour être efficace. 
+	\item L'écriture des scénarios de tests en XML, ce qui les rend peu lisible et maintenable, ce qui est le cas de JMeter.\\
+\end{itemize}
+
+Gatling a donc été mis au point afin d'offrir une alternative, venant corriger ces problèmes.
+
+\subsubsection*{Qu'est ce qui différencie Gatling de ces concurrents ?}
+
+Le modèle des \textit{acteurs} sur lequel repose Gatling ainsi que son utilisation des communications asynchrones font de Gatling un outil peu gourmand en ressources.
+JMeter, son principal concurrent dans l'écosystème Java, exigera une ou des machines très puissantes pour injecter une charge que Gatling peut effectuer sur une machine aux performances modérées.\\
+
+Une autre différence importante entre Gatling et certains de ses concurrents est le format des scénarios de tests (ou \textit{simulations}).\\
+Alors que de nombreux outils utilisent un fichier au format XML afin de décrire leur simulations, ce qui les rend plus difficilement lisible et manipulable sans passer par l'UI de l'outil et également plus difficilement maintenable, les simulations de Gatling sont écrits  à l'aide d'un DSL (Domain-Specific programming Language) basé sur Scala, simples à modifier, à mettre à jour et à intégrer au reste du projet (dans le cadre d'un système de contrôle de version par exemple).
+
+\begin{figure}
  \centering
  \includegraphics[width=\linewidth]{images/req_details_basic_usage.pdf}
  \caption{Exemple de rapport pour une requête}
 \end{figure}
 
-\subsection{Scala}
+\subsection{Technologies utilisées}
 
-Gatling est écrit en Scala \cite{scala}, un langage qui mélange les paradigmes de programmation orienté objet et de programmation fonctionnelle. Ce langage a été créé en 2003 par Martin ORDERSKY, qui a aussi travaillé sur \verb+javac+, le compilateur Java. Ce langage qui a presque 10 ans a un sursaut d'engouement depuis l'année dernière avec l'apparition notamment des frameworks Akka et Play qui permettent de créer des applications web directement en Scala.\\
+Le projet est lui-même écrit en Scala, un langage de programmation multi-paradigme. Il utilise Akka une librairie Scala/Java permettant de créer facilement des applications concurrentes. Gatling repose pour les I/O sur la librairie Async IO basé sur Netty.
 
-Comme en Java, le code Scala est compilé en bytecode et est exécuté sur une JVM. Scala et Java sont interopérable puisqu'il est possible d'utiliser des API Java en Scala et vice-versa. D'ailleurs, de nombreuses API du SDK Java n'ont pas d'équivalent en Scala, il suffit d'accéder directement à l'API Java.\\
+\subsubsection{Scala}
 
-Scala utilise un typage statique des variables, tout comme en Java mais tire beaucoup plus partie de la généricité. C'est à dire le fait de paramétrer une classe ou une fonction par un type. L'objectif étant d'avoir un maximum d'erreur de type découvert par le compilateur et non à l'exécution.\\
+Gatling est écrit en Scala \cite{scala}, un langage qui mélange les paradigmes de programmation orienté objet et de programmation fonctionnelle. Ce langage a été créé en 2003 par Martin ORDERSKY, qui a aussi travaillé sur \verb+javac+, le compilateur Java. Ce langage qui a presque 10 ans connait ces dernières années une augmentation rapide de sa popularité grâce à son utilisation chez Twitter et à la création de framework comme Akka ou Play \cite{play} qui permettent de créer des applications web uniquement en Scala.\\
 
-Un des avantages de Scala est d'écrire du code beaucoup plus concis qu'en Java, au prix d'une compilation plus lente. Le code Scala est plus concis car une bonne partie de la syntaxe est facultative, notamment grâce à l'inférence de type. Le compilateur est suffisament intelligent pour deviner les parties facultatives.\\
+Comme en Java, le code Scala est compilé en bytecode et est exécuté sur une JVM. Scala et Java sont interopérable puisqu'il est possible d'utiliser des API Java en Scala et inversement. D'ailleurs, de nombreuses API du SDK Java n'ont pas d'équivalent en Scala, il suffit d'accéder directement à l'API Java.\\
 
-Ce langage permet d'écrire du code vraiment réduit au minimum, ce qui permet de rendre le code plus maintenable. Sa compréhension est cependant plus complexe. De plus, la façon de développer est différente du Java puisqu'on est aussi dans un paradigme de programmation fonctionnelle.\\
+Scala est un langage fortement typé au même titre que Java, cependant le type des variables peut être inféré à la compilation. De plus il tire beaucoup plus partie de la généricité. C'est à dire le fait de paramétrer une classe ou une fonction par un type. L'objectif étant d'avoir un maximum d'erreur de type découvert par le compilateur et non à l'exécution.\\
 
-Il a donc nécessité un temps d'adaptation avant de pouvoir comprendre le fonctionnement interne de Gatling et de pouvoir développer de nouvelles fonctionnalités.
+Un des avantages de Scala est l'écriture d'un code beaucoup plus concis qu'en Java, au prix d'une compilation plus lente. Le code Scala est plus concis car il permet d'éviter d'écrire toute la partie du code qui n'est pas réellement utile et qui devient donc facultative.\\
 
-\subsection{Akka}
+Ce langage permet d'écrire un code vraiment réduit à son essence, ce qui permet de le rendre plus maintenable. Sa compréhension peut être cependant plus complexe. De plus, la façon de développer et penser son code est différente de celle de Java puisqu'on est aussi dans un paradigme de programmation fonctionnelle.\\
 
-Akka \cite{akka} un framework avec une API Scala et une API Java pour faire des applications concurrentes. Le framework Akka permet de s'abstraire des threads qui sont utilisés pour pouvoir exécuter des parties du code en parallèle. Dans le cas de Gatling, l'objectif est d'envoyer plusieurs et surtout beaucoup de requêtes en parallèle.\\
+Il a donc nécessité un temps d'adaptation et d'apprentissage \cite{proginscala} avant de pouvoir comprendre le fonctionnement interne de Gatling et de pouvoir développer de nouvelles fonctionnalités.
 
-Akka s'abstrait des threads en introduisant les acteurs. Les acteurs sont des entités qui s'exécutent en parallèle. Un acteur possède une boite aux lettres qui permet de recevoir des messages. L'exécution d'un acteur est démarré par la réception d'un message.\\
+\subsubsection{Akka}
 
-En interne, Akka utilise un pool de threads pour exécuter les acteurs. Akka permet d'avoir potentiellement un très grand nombre d'acteurs qui s'exécutent (plus de 1000) sur un pool de threads restreints. Le problème lorsqu'on développe une application concurrente c'est la performance. En effet, plus on veut exécuter de tâches en parallèle, plus on créé de threads. Cependant, lorsque trop de threads sont créés, les performance sont diminuées. Akka permet de répondre à ce problème puisqu'il utilise un nombre restreints de threads.
+Akka \cite{akka} est un framework écrit en Scala, disposant aussi d'une API Java, pour faciliter la réalisation d'applications fortement concurrentes en s'appuyant sur le système des Acteurs. Le framework Akka permet de s'abstraire de la notion de threads et d'exploiter au maximum les processeurs multi-cœurs. Dans le cas de Gatling, l'objectif est de pouvoir gérer un grand nombre d'utilisateurs en parallèle.\\
+
+Akka utilise, pour s'abstraire des threads et régler les problèmes de synchronisation liés à la concurrence, le système des acteurs. Les acteurs sont des objets encapsulant un état et un comportement. Ils communiquent entre eux exclusivement à l'aide de messages placé dans une boite au lettre propre à chaque acteur. L'exécution d'un acteur est démarré par la réception d'un message. Ceci permet de réaliser la plupart des traitement de manière asynchrone et de minimiser ainsi le blocage des threads. En effet un acteur n'est pas lié à un thread, il est exécuté sur un thread quelconque lorsque cela est nécessaire. En interne, Akka utilise un pool de threads pour exécuter les acteurs. Ceci permet d'avoir potentiellement un très grand nombre d'acteurs qui s'exécutent (plus de 1000) sur un pool de threads restreints (30 threads).
+
+\subsubsection{Netty \& Async HTTP Handler}
+
+Async HTTP Handler est un client HTTP reposant sur le moteur Netty qui permet de gérer l'envoi de requêtes (et le traitement des réponses) HTTP de manière asynchrone, complétant ainsi le caractère asynchrone d'Akka, ce qui permet à Gatling de disposer d'un moteur intégralement asynchrone. 
+
+\subsection{Architecture de Gatling}
+
+\begin{center}
+	\includegraphics[scale=0.3]{images/gatling-process.pdf}
+\end{center}
 
 \subsection{Récupération des métriques serveurs}
 
-La première fonctionnalité sur laquelle nous avons effectué des recherches est la récupération des métriques serveurs. En effet, actuellement seules les métriques côté client sont enregistrées comme par exemple le temps de réponse ou le nombre de requêtes par secondes. L'objectif est donc de récupérer les statistiques du serveur telles que la charge du serveur ou l'état de la mémoire pour pouvoir mettre en relation les métriques serveurs avec les métriques clientes.\\
+Actuellement, les mesures prises par Gatling ne concernent que ce qu'un utilisateur de l'application observerait : le temps que met une page web à répondre ou tout simplement si celle répond ou non.\\
 
-Pour pouvoir mettre en place cette fonctionnalité, nous avons donc recherché les technologies à utiliser, puis nous les avons testé et surtout vérifié leur impact sur les performances.\\
+La première fonctionnalité que Stéphane LANDELLE souhaitait que nous étudions été le monitoring de l'application testée, c\^oté serveur.\\
+
+Ce choix était motivé par deux raisons :
+\begin{itemize}
+	\item Bien qu'étant open source, Gatling reste en concurrence avec d'autres solutions, et plusieurs d'entre elles proposent du monitoring c\^oté serveur ou comptent en intégrer dans un futur proche. Intégrer du monitoring c\^oté serveur  dans Gatling permettrait donc à celui-ci de ne pas prendre de retard sur la concurrence.
+	\item Monitorer l'application testée permettrait d'obtenir de précieuses informations sur le comportement de l'application durant le test que ça soit en terme d'utilisation CPU, de mémoire, d'activité des bases de données\ldots En recoupant ces informations avec celles déjà existantes, cela permettrait d'obtenir des rapports encore plus pertinents.\\
+\end{itemize}
+
+Pour pouvoir mettre en place cette fonctionnalité, nous avons donc effectué un état de l'art des technologies à utiliser, puis nous les avons testé pour vérifié leur impact sur les performances du serveur instrumenté (cf. annexe~\ref{ann:benchmark}).\\
 
 \subsubsection{Java Management eXtensions}
 
@@ -71,7 +120,7 @@ Pour pouvoir facilement accéder aux objets exposés (appelés MBean), nous avon
 
 L'utilisation de JMX est donc très simple, de plus, plusieurs métriques sont déjà exposées par la JVM, telle que l'utilisation du CPU, l'utilisation de la Heap (mémore interne de la JVM), la durée totale de collection par le Garbage Collector (GC), \dots{}\\
 
-Cependant, un des inconvénients de l'utilisation de JMX est l'utilisation sous-jacente de RMI qui déclenche régulièrement le GC. L'exécution du Garbage Collector étant coûteuse en performance, son utilisation peut avoir un impact. En effet, nous voulons utiliser JMX pour récupérer des informations sur le serveur qui est en train d'être testé. L'utilisation de JMX peut donc interférer avec les performances du serveur et fausser les résultats du test de charge.
+Cependant, un des inconvénients de l'utilisation de JMX est l'utilisation sous-jacente de RMI qui déclenche régulièrement le GC. L'exécution de celui-ci étant coûteuse en performance, son utilisation peut avoir un impact sur le serveur testé et ainsi fausser les résultats du test de charge.
 
 \subsubsection{Agent Java}
 
@@ -115,27 +164,25 @@ Avec Metrics, il est aussi possible de créer notre propre système d'écriture 
 
 \subsubsection{Notre solution}
 
-La solution que nous avons conçut mais pas développé est la suivante : nous utilisons un agent que nous attachons au serveur via l'API Attach. Cet agent accède aux informations de la JVM via JMX en local et aux informations de la machine via Sigar. Les données sont consolidées par Metrics et enregistrées via un système configurable : écriture dans un fichier ou dans une base de données.\\
+La solution que nous avons prototypé mais pas développé est la suivante : nous utilisons un agent que nous attachons au serveur via l'API Attach. Cet agent accède aux informations de la JVM via JMX en local et aux informations de la machine via Sigar. Les données sont consolidées par Metrics et enregistrées via un système configurable : écriture dans un fichier ou dans une base de données.\\
 
 Nous n'avons pas développé cette solution pour plusieurs raisons :
 \begin{itemize}
  \item Elle impact les performances du serveur en test et fausse donc les résultats,
- \item Notre problématique se rapproche beaucoup du monitoring d'un serveur pour lequel il existe des solutions déjà toutes faites.\\
+ \item Notre problématique se rapproche beaucoup du monitoring d'un serveur pour lequel il existe déjà des solutions, surement plus performante et complète.\\
 \end{itemize}
 
 Cette fonctionnalité n'avait donc pas vraiment sa place dans Gatling.
 
 \subsection{Exposition des métriques Gatling}
 
-Si la précédente fonctionnalité n'a pas été développée, elle a donné l'idée d'exposer les statistiques de Gatling pour être accessibles à un système tiers. En effet, pour le monitoring de serveur, des applications telles que Graphite et Ganglia sont très utilisées. L'objectif était donc d'envoyer les mesures faites par Gatling vers ces systèmes.\\
+Si la précédente fonctionnalité n'a pas été développée, elle a donné l'idée d'exposer les statistiques de Gatling pour être accessibles à un système tiers. En effet, pour le monitoring de serveur, des applications telles que Graphite et Ganglia sont très utilisées. L'objectif était donc de consolider un certain nombre de métriques en temps réelle et de les envoyer vers ces systèmes.\\
 
-Pour mettre en place cette fonctionnalité, il a simplement fallu utilisé Metrics, qui permet déjà d'exposer les métriques via JMX mais aussi d'envoyer ces informations vers Graphite et Ganglia. L'activation de cette fonctionnalité est faite via le fichier de configuration.\\
+Je n'ai que très peu travailler sur cette fonctionnalité, donc je ne m'étendrai pas dessus.
 
-Je n'ai que très peu travailler sur cette fonctionnalité, donc je ne m'étendrai pas dessus. Mon travail s'est restreint a tester Metrics en faisant un mini-projet pour vérifier son utilisabilité.
+\subsection{Génération des rapports}
 
-\subsection{Génération du rapport}
-
-Je suis ensuite passé sur une troisième fonctionnalité pour le restant de mon stage. Cette fonctionnalité est une amélioration d'une partie de Gatling et est due à une remarque d'un utilisateur. Cet utilisateur a testé son application pendant 48 heures générant un journal de 8 Go à traiter pour créer le rapport. Cependant cette génération du rapport chargeait le fichier en mémoire, ce qui demande une machine possédant une importante quantité de mémoire.\\
+Je suis ensuite passé sur une troisième fonctionnalité. Cette fonctionnalité est une amélioration d'une partie de Gatling et est due à une remarque d'un utilisateur. Cet utilisateur a testé son application pendant 48 heures générant un journal de 8 Go à traiter pour créer le rapport. Cependant cette génération de rapport nécessitait le chargement du fichier en mémoire ce qui n'était dans le cas présent pas possible.\\
 
 Pour mieux comprendre, voici le fonctionnement de Gatling :
 \begin{enumerate}
@@ -150,13 +197,13 @@ Il y a plusieurs avantage à cette méthode :
  \item Si Gatling plante, peu importe la raison, les données ne sont pas perdues car écrites au fur et à mesure. Il est possible alors de relancer Gatling uniquement pour générer le rapport.\\
 \end{itemize}
 
-La génération du rapport utilisée auparavant chargeait tout le fichier en mémoire pour pouvoir le traiter. En effet, c'est la méthode la plus simple pour pouvoir déterminer des statistiques telles que les quantiles (médiane, 95\ieme{} percentile, 99\ieme{} percentile).\\
+Comme expliqué précédemment la méthode utilisée auparavant chargeait tout le fichier en mémoire pour pouvoir le traiter. En effet, c'est la méthode la plus simple pour pouvoir déterminer des statistiques telles que les quantiles (médiane, 95\ieme{} percentile, 99\ieme{} percentile).\\
 
-Nous nous sommes donc renseigné sur les systèmes permettant de traiter des quantités importantes de données sans impacter de façon significative la mémoire utilisée.
+Nous nous sommes donc renseigné sur les systèmes permettant de traiter des quantités importantes de données sans avoir besoin de charger en mémoire toutes les données et ainsi réduire de façon significative la mémoire utilisée.
 
 \subsubsection{MapReduce}
 
-Popularisé par Google, MapReduce est un modèle de programmation permettant de traiter de façon parallèle et distribué une quantité importante de données (plusieurs téraoctets). MapReduce modélise la chaîne de traitement des données par une succession de tâches \verb+map+ et \verb+reduce+.\\
+Popularisé par Google, MapReduce est un modèle de programmation permettant de traiter de façon parallèle et distribué une quantité importante de données (du téraoctet au pétaoctet). MapReduce modélise la chaîne de traitement des données par une succession de tâches \verb+map+ et \verb+reduce+.\\
 
 Une tâche \verb+map+ correspond à un traitement donnée par donnée. Voici la signature en pseudo-code de la fonction \verb+map+ :
 
@@ -186,9 +233,9 @@ Nous avons donc cherché des librairies d'abstraction à Hadoop pour nous simpli
 
 \subsubsection{Cascading et Scalding}
 
-Il existe plusieurs librairies d'abstraction, certaines plus abouties que d'autres. Celle que nous avons retenue s'appelle Cascading. Elle permet d'écrire un traitement de plus haut niveau avec des fonctionnalités telles que le GroupBy au sens SQL, \dots{}\\
+Il existe plusieurs librairies d'abstraction, certaines plus abouties que d'autres. Celle que nous avons retenue s'appelle Cascading, c'est la solution la plus répandue, elle est entre autre utilisée en production par Twitter. Ces derniers ont développé une sur-couche à Cascading en Scala, Scalding, que nous avons aussi utilisé car elle rend l'écriture des taches plus aisée. Ces solutions offrent des traitements comme le GroupBy au sens SQL, \dots{}\\
 
-Un autre avantage à Cascading est son mode local qui ne s'appuie pas sur Hadoop mais sur une implémentation intelligente en mémoire dont l'objectif est de tester les traitements en Cascading. Bien qu'a des fins de tests, il faut se pencher sur l'ordre de grandeur de la quantité de données à traiter. MapReduce traite des téraoctets de données. On peut donc supposer qu'un framework de test traite des données en quantités plus faibles, mais de quel ordre ? Gigaoctets ? Mégaoctets ? Nous avons donc voulu tester ses capacités et comprendre comment cela fonctionnait.\\
+Un autre avantage de Cascading est son mode local qui ne s'appuie pas sur Hadoop mais sur une implémentation intelligente en mémoire dont l'objectif est de tester les traitements en Cascading. Bien qu'à des fins de tests nous nous sommes intéressé à l'utilisation de ce mode pour notre problématique. Nous avons donc testé ce mode local pour en comprendre le fonctionnement et les limites.\\
 
 Après ces tests, nous avons pu comprendre les limites de ce mode local. La limite principale n'est pas tellement la taille du fichier en entrée mais le nombre de données intermédiaires. En effet, le mode local est suffisamment intelligent pour exécuter un maximum de calcul au fur et à mesure de la lecture du fichier. Le seul traitement bloquant étant un \verb+reduce+ qui a besoin de toutes les données pour avoir le résultat. Cependant, un \verb+reduce+ n'a pas besoin de toutes les données en mémoire pour s'exécuter, les calculs peuvent passer par des résultats partiels.\\
 
@@ -209,26 +256,26 @@ Ainsi tout le fichier n'est pas en mémoire. Bien sur, pour que dans notre exemp
 
 Cascading va donc fusionner les tâches \verb+map+ entre chaque tâche \verb+reduce+ et calculer cette dernière au fur et à mesure. Les résultats en mémoire ne seront donc que les résultats des \verb+reduce+ intermédiaires. Il y a bien sur des cas où il faut toutes les données en mémoires : la fonction utilisée pour le \verb+reduce+ n'est pas associative, c'est à dire que l'ordre d'application pour réduire une liste de données à un résultat dépend de l'ordre des données en entrées.\\
 
-De plus, dans la mesure ou les résultats des \verb+reduce+ intermédiaires est en mémoire, il faut qu'ils puissent tenir en mémoire. Le comportement du mode local de Cascading dépend donc des calculs. Dans notre cas, la librairie utilisée pour afficher les résultats n'affiche pas plus de 5000 points par courbe, par graphique. La première étape du calcul est donc de regrouper les données par nom de la requête, status de la requête (succès ou échec) et par classe. La classe étant calculée de façon qu'il n'y ait pas plus de 5000 classes. La nature de nos calculs fait que peu importe la taille du fichier en entrée les résultats intermédiaires ont une empreinte mémoire très faible (moins de 200 Mo pour un test de 48h).\\
-
-Après avoir compris que le mode local de Cascading était utilisable dans notre cas, nous nous sommes renseigné comment l'utiliser de façon simple en Scala. Nous avons alors trouvé Scalding, une abstraction à Cascading en Scala, dont le fonctionnement mimique celui des collections en Scala.
+De plus, dans la mesure ou les résultats des \verb+reduce+ intermédiaires est en mémoire, il faut qu'ils puissent tenir en mémoire. Le comportement du mode local de Cascading dépend donc des calculs. Dans notre cas, la librairie utilisée pour afficher les résultats n'affiche pas plus de 5000 points par courbe. La première étape du calcul est donc de regrouper les données par nom de la requête, status de la requête (succès ou échec) et par \textit{bucket}. Le \textit{bucket} étant calculée de façon qu'il n'y en ait pas plus de 5000. La nature de nos calculs fait que peu importe la taille du fichier en entrée les résultats intermédiaires ont une empreinte mémoire très faible (moins de 200 Mo pour un test de 48h représentant un journal de 8Go).\\
 
 \subsubsection{Développement de l'amélioration}
 
 Pour mettre en place l'amélioration, nous avons commencé par développer une application standalone qui permette de générer le rapport à partir du journal. Cette application effectue un traitement en 3 phases :
 
 \begin{enumerate}
- \item Lecture complète du fichier en Scala pur pour déterminer des valeurs générales nécessaires au traitement, notamment l'heure de début et l'heure de fin du test. Ces deux valeurs vont permettre de déterminer les classes pour ne garder que 5000 valeurs au plus pour les statistiques telles que le nombre de requêtes par classes au cours du test.
+ \item Lecture complète du fichier pour déterminer des valeurs générales nécessaires au traitement, notamment l'heure de début et l'heure de fin du test. Ces deux valeurs vont permettre de déterminer les \textit{buckets} pour ne garder que 5000 valeurs au plus pour les statistiques.
  \item Traitement avec Scalding utilisant Cascading en mode local, ce qui permet de calculer la quasi-totalité des statistiques.
- \item Calcul des dernières statistiques notamment les quantiles et le nombre de sessions actives par classe au cours du test. Ces calculs nécessitent de parcourir une liste de valeur dans un ordre précis avec une connaissance de la précédente valeur, ce qui n'est pas possible en MapReduce. Ainsi, la distribution des valeurs est déterminée par l'étape 2 mais les quantiles à cette étape. De même, pour les sessions actives, l'étape 2 détermine le nombre de sessions actives en plus ou en moins par classe. Cette 3\ieme{} étape fait l'accumulation des données pour avoir le nombre de sessions actives par classe.\\
+ \item Calcul des dernières statistiques notamment les quantiles et le nombre de sessions actives par classe au cours du test. Ces calculs nécessitent de parcourir une liste de valeur dans un ordre précis avec une connaissance de la précédente valeur, ce qui n'est pas possible en MapReduce. Ainsi, la distribution des valeurs est déterminée par l'étape 2 mais les quantiles à cette étape. De même, pour les sessions actives, l'étape 2 détermine le nombre de sessions actives en plus ou en moins par \textit{bucket}. Cette 3\ieme{} étape fait l'accumulation des données pour avoir le nombre de sessions actives par classe.\\
 \end{enumerate}
 
 Une fois l'ensemble des statistiques calculées avec notre méthode, nous l'avons testée avec un journal de 8 Go. Le résultat s'est calculé en 14 minutes avec une empreinte mémoire de moins de 200 Mo. L'empreinte mémoire a été déterminée avec JVisualVM qui permet d'afficher l'utilisation de la mémoire d'une JVM en cours d'exécution. Les 14 minutes correspondent au temps nécessaire pour lire le fichier 2 fois. Les calculs étant plus rapide que la lecture sur disque, il est donc normal que la partie bloquante soit la lecture.\\
 
-Nous avons ensuite intégré notre travail dans Gatling, en remplaçant l'implémentation actuelle de la génération du rapport par la notre. Bien que celui-ci soit intégré, il est pour l'instant dans une branche de test pour vérifier que tout fonctionne bien et que les résultats sont justes. Lorsque cette méthode aura été suffisamment testée, l'amélioration sera intégrée dans la branche principale de développement du projet.
+Nous avons ensuite intégré notre travail dans Gatling, en remplaçant l'implémentation actuelle de la génération du rapport par la notre. Notre travail a été intégré à la branche \textit{master} de Gatling et est présente dans la release 1.3.0 sortie le 20 septembre.
 
 \subsubsection{Conclusion}
 
 L'utilisation de Cascading en mode local, nous aura permis de comprendre la nécessité de tester les frameworks que l'on pourrait utiliser. En effet, notre utilisation de Cascading en production n'est pas recommandée car nous utilisons une partie qui normalement sert de test. C'est cependant à mettre en perspective par rapport à l'utilisation en production : Cascading sert à traiter des téraoctets de données. La volumétrie est donc importante ici puisque dans notre cas nous ne traitons que des journaux de quelques gigaoctets au maximum.\\
 
 Scalding s'est avéré être très utile car l'écriture du traitement est beaucoup moins verbeuse et plus intuitive qu'en Cascading, cependant, cette librarie créée par Twitter est très mal conçue car elle dépend fortement de Hadoop, même si on utilise le mode local de Cascading. On est donc obligé d'avoir une dépendance à Hadoop bien que nous ne l'utilisons pas.
+
+\subsection{Plugin Jenkins}

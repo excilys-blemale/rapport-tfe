@@ -29,12 +29,14 @@
 \BOOKMARK [2][-]{subsection.3.2.7}{Apport personnel}{section.3.2}
 \BOOKMARK [1][-]{section.3.3}{Gatling}{chapter.3}
 \BOOKMARK [2][-]{subsection.3.3.1}{Pr\351sentation du projet}{section.3.3}
-\BOOKMARK [2][-]{subsection.3.3.2}{Scala}{section.3.3}
-\BOOKMARK [2][-]{subsection.3.3.3}{Akka}{section.3.3}
+\BOOKMARK [2][-]{subsection.3.3.2}{Technologies utilis\351es}{section.3.3}
+\BOOKMARK [2][-]{subsection.3.3.3}{Architecture de Gatling}{section.3.3}
 \BOOKMARK [2][-]{subsection.3.3.4}{R\351cup\351ration des m\351triques serveurs}{section.3.3}
 \BOOKMARK [2][-]{subsection.3.3.5}{Exposition des m\351triques Gatling}{section.3.3}
-\BOOKMARK [2][-]{subsection.3.3.6}{G\351n\351ration du rapport}{section.3.3}
-\BOOKMARK [0][-]{chapter*.61}{Conclusion}{}
-\BOOKMARK [0][-]{chapter*.62}{Bibliographie}{}
+\BOOKMARK [2][-]{subsection.3.3.6}{G\351n\351ration des rapports}{section.3.3}
+\BOOKMARK [2][-]{subsection.3.3.7}{Plugin Jenkins}{section.3.3}
+\BOOKMARK [0][-]{chapter*.67}{Conclusion}{}
+\BOOKMARK [0][-]{chapter*.68}{Bibliographie}{}
 \BOOKMARK [0][-]{appendix.A}{Charte Excilys}{}
 \BOOKMARK [0][-]{appendix.B}{Test de charge de MF Banking}{}
+\BOOKMARK [0][-]{appendix.C}{Impact des solutions de monitoring}{}

@@ -51,22 +51,27 @@
 \contentsline {subsection}{\numberline {3.2.7}Apport personnel}{31}{subsection.3.2.7}
 \contentsline {section}{\numberline {3.3}Gatling}{33}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Pr\IeC {\'e}sentation du projet}{33}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Scala}{34}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Akka}{35}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}R\IeC {\'e}cup\IeC {\'e}ration des m\IeC {\'e}triques serveurs}{35}{subsection.3.3.4}
-\contentsline {subsubsection}{Java Management eXtensions}{36}{section*.48}
-\contentsline {subsubsection}{Agent Java}{37}{section*.50}
-\contentsline {subsubsection}{Sigar}{37}{section*.51}
-\contentsline {subsubsection}{Metrics}{38}{section*.52}
-\contentsline {subsubsection}{Notre solution}{38}{section*.53}
-\contentsline {subsection}{\numberline {3.3.5}Exposition des m\IeC {\'e}triques Gatling}{39}{subsection.3.3.5}
-\contentsline {subsection}{\numberline {3.3.6}G\IeC {\'e}n\IeC {\'e}ration du rapport}{39}{subsection.3.3.6}
-\contentsline {subsubsection}{MapReduce}{39}{section*.54}
-\contentsline {subsubsection}{Apache Hadoop}{40}{section*.55}
-\contentsline {subsubsection}{Cascading et Scalding}{40}{section*.56}
-\contentsline {subsubsection}{D\IeC {\'e}veloppement de l'am\IeC {\'e}lioration}{43}{section*.59}
-\contentsline {subsubsection}{Conclusion}{43}{section*.60}
-\contentsline {chapter}{Conclusion}{45}{chapter*.61}
-\contentsline {chapter}{Bibliographie}{46}{chapter*.62}
-\contentsline {chapter}{\numberline {A}Charte Excilys{}}{47}{appendix.A}
-\contentsline {chapter}{\numberline {B}Test de charge de MF Banking}{49}{appendix.B}
+\contentsline {subsection}{\numberline {3.3.2}Technologies utilis\IeC {\'e}es}{34}{subsection.3.3.2}
+\contentsline {subsubsection}{Scala}{34}{section*.51}
+\contentsline {subsubsection}{Akka}{36}{section*.52}
+\contentsline {subsubsection}{Netty \& Async HTTP Handler}{36}{section*.53}
+\contentsline {subsection}{\numberline {3.3.3}Architecture de Gatling}{37}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}R\IeC {\'e}cup\IeC {\'e}ration des m\IeC {\'e}triques serveurs}{37}{subsection.3.3.4}
+\contentsline {subsubsection}{Java Management eXtensions}{38}{section*.54}
+\contentsline {subsubsection}{Agent Java}{39}{section*.56}
+\contentsline {subsubsection}{Sigar}{39}{section*.57}
+\contentsline {subsubsection}{Metrics}{39}{section*.58}
+\contentsline {subsubsection}{Notre solution}{40}{section*.59}
+\contentsline {subsection}{\numberline {3.3.5}Exposition des m\IeC {\'e}triques Gatling}{40}{subsection.3.3.5}
+\contentsline {subsection}{\numberline {3.3.6}G\IeC {\'e}n\IeC {\'e}ration des rapports}{41}{subsection.3.3.6}
+\contentsline {subsubsection}{MapReduce}{41}{section*.60}
+\contentsline {subsubsection}{Apache Hadoop}{42}{section*.61}
+\contentsline {subsubsection}{Cascading et Scalding}{42}{section*.62}
+\contentsline {subsubsection}{D\IeC {\'e}veloppement de l'am\IeC {\'e}lioration}{45}{section*.65}
+\contentsline {subsubsection}{Conclusion}{45}{section*.66}
+\contentsline {subsection}{\numberline {3.3.7}Plugin Jenkins}{46}{subsection.3.3.7}
+\contentsline {chapter}{Conclusion}{47}{chapter*.67}
+\contentsline {chapter}{Bibliographie}{48}{chapter*.68}
+\contentsline {chapter}{\numberline {A}Charte Excilys{}}{49}{appendix.A}
+\contentsline {chapter}{\numberline {B}Test de charge de MF Banking}{51}{appendix.B}
+\contentsline {chapter}{\numberline {C}Impact des solutions de monitoring}{54}{appendix.C}
