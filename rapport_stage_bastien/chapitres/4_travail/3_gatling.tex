@@ -1,6 +1,6 @@
 \section{Gatling}
 
-Après mon travail sur \capico{}, j'ai rejoint, avec deux autres stagiaires, Stéphane LANDELLE sur son projet appelé Gatling \cite{gatling} pour le restant de mon stage.
+Après le projet d'e-banking, j'ai rejoint, avec deux autres stagiaires, Stéphane LANDELLE sur son projet open-source appelé Gatling \cite{gatling} pour le restant de mon stage.
 
 \begin{figure}[H]
  \centering
@@ -14,7 +14,7 @@ Gatling est une application permettant d'effectuer des tests de charges sur des 
 
 Le fonctionnement de l'application est très simple. L'utilisateur décrit des scénarii de tests dans un fichier à l'aide d'un DSL (Domain-Specific programming Language). Ces scénarii sont une suite de requêtes HTTP à envoyer à l'application web en test pour simuler un utilisateur naviguant dans l'application. Il suffit ensuite de spécifier le nombre d'utilisateurs à simuler. Gatling compile ensuite ce fichier pour exécuter les requêtes et enregistrer dans un journal les valeurs permettant, plus tard, de calculer des statistiques telles que le temps de réponse du serveur.\\
 
-Lorsque tous les scénarii ont été exécutés, Gatling lit le journal, calcul plusieurs statistiques, notamment le temps de réponse du serveur et le nombre de requêtes par secondes, pour générer un rapport sous la forme de pages HTML contenant plusieurs graphiques permettant de réprésenter les résultats.\\
+Lorsque tous les scénarii ont été exécutés, Gatling lit le journal, calcul plusieurs statistiques, notamment le temps de réponse du serveur et le nombre de requêtes par secondes, pour générer un rapport sous la forme de pages HTML contenant plusieurs graphiques permettant de représenter les résultats.\\
 
 Le fichier décrivant les requêtes à exécuter sont écrits dans un langage de programmation qui n'est pas forcément facile à prendre en main pour tout le monde. C'est pourquoi, Gatling vient avec une application appelée le Gatling Recorder qui permet d'enregistrer les requêtes tout en naviguant sur l'application web avec un navigateur. Le Recorder fonctionne en tant que proxy pour le navigateur. Le scénario de test est donc la simulation de la navigation de l'utlisateur s'enregistrant avec le Recorder.\\
 

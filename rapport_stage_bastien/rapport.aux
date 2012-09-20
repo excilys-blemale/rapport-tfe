@@ -3,21 +3,18 @@
 \catcode`;\active
 \catcode`!\active
 \catcode`?\active
-\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
-\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
-\global\let\oldcontentsline\contentsline
-\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
-\global\let\oldnewlabel\newlabel
-\gdef\newlabel#1#2{\newlabelxx{#1}#2}
-\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
-\AtEndDocument{\ifx\hyper@anchor\@undefined
-\let\contentsline\oldcontentsline
-\let\newlabel\oldnewlabel
-\fi}
-\fi}
-\global\let\hyper@last\relax 
-\gdef\HyperFirstAtBeginDocument#1{#1}
-\providecommand\HyField@AuxAddToFields[1]{}
+\ifx\hyper@anchor\@undefined
+\global \let \oldcontentsline\contentsline
+\gdef \contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global \let \oldnewlabel\newlabel
+\gdef \newlabel#1#2{\newlabelxx{#1}#2}
+\gdef \newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\let \contentsline\oldcontentsline
+\let \newlabel\oldnewlabel}
+\else
+\global \let \hyper@last\relax 
+\fi
+
 \select@language{french}
 \@writefile{toc}{\select@language{french}}
 \@writefile{lof}{\select@language{french}}
@@ -33,50 +30,60 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.1.2}La soci\IeC {\'e}t\IeC {\'e} eBusiness Information{}}{5}{subsection.1.1.2}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces Les 4 m\IeC {\'e}tiers\relax }}{6}{figure.caption.4}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces R\IeC {\'e}partition du chiffre d'affaires par secteur d'activit\IeC {\'e}\relax }}{7}{figure.caption.5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.3}{\ignorespaces \IeC {\'E}volution du chiffre d'affaires\relax }}{8}{figure.caption.6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.3}{\ignorespaces \IeC {\'E}volution du chiffre d'affaires\relax }}{7}{figure.caption.6}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.1.3}Les autres entit\IeC {\'e}s du groupe}{8}{subsection.1.1.3}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.2}L'organisation de l'entreprise}{9}{section.1.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}Le service \IeC {\'e}quitable - La charte Excilys{}}{9}{subsection.1.2.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}L'organisation de l'entreprise}{8}{section.1.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}Le service \IeC {\'e}quitable - La charte Excilys{}}{8}{subsection.1.2.1}}
 \citation{capico}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces Le service \IeC {\'e}quitable\relax }}{10}{figure.caption.7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.2}Le syst\IeC {\`e}me d'information du groupe}{10}{subsection.1.2.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.5}{\ignorespaces Syst\IeC {\`e}me d'information du groupe Excilys{}\relax }}{11}{figure.caption.8}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {2}Pr\IeC {\'e}sentation du stage}{12}{chapter.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces Le service \IeC {\'e}quitable\relax }}{9}{figure.caption.7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.2}Le syst\IeC {\`e}me d'information du groupe}{9}{subsection.1.2.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.5}{\ignorespaces Syst\IeC {\`e}me d'information du groupe Excilys{}\relax }}{10}{figure.caption.8}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Pr\IeC {\'e}sentation du stage}{11}{chapter.2}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {2.1}Sujet du stage}{12}{section.2.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}La formation}{12}{section.2.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Gatling}{13}{section.2.3}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Travail effectu\IeC {\'e}}{14}{chapter.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Sujet du stage}{11}{section.2.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}La formation}{11}{section.2.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Gatling}{12}{section.2.3}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Travail effectu\IeC {\'e}}{13}{chapter.3}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@input{chapitres/4_travail/1_formation.aux}
 \@input{chapitres/4_travail/2_ebanking.aux}
 \@input{chapitres/4_travail/3_gatling.aux}
-\@writefile{toc}{\contentsline {chapter}{Conclusion}{42}{chapter*.49}}
-\bibcite{asi}{1}
-\bibcite{excilys}{2}
-\bibcite{capico}{3}
+\@writefile{toc}{\contentsline {chapter}{Conclusion}{45}{chapter*.61}}
+\bibcite{excilys}{1}
+\bibcite{capico}{2}
+\bibcite{jelastic}{3}
 \bibcite{scrum}{4}
-\bibcite{maven}{5}
-\bibcite{java}{6}
-\bibcite{junit}{7}
-\bibcite{jee}{8}
-\bibcite{jdbc}{9}
-\bibcite{hibernate}{10}
-\bibcite{spring}{11}
-\bibcite{capicsou-bank-svn}{12}
-\bibcite{parlezvousandroid}{13}
-\bibcite{gatling}{14}
-\bibcite{scala}{15}
-\bibcite{akka}{16}
-\bibcite{jmx}{17}
-\bibcite{sigar}{18}
-\bibcite{metrics}{19}
-\bibcite{hadoop}{20}
-\@writefile{toc}{\contentsline {chapter}{Bibliographie}{43}{chapter*.50}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Charte Excilys{}}{44}{appendix.A}}
+\bibcite{build}{5}
+\bibcite{maven}{6}
+\bibcite{java}{7}
+\bibcite{junit}{8}
+\bibcite{jee}{9}
+\bibcite{jdbc}{10}
+\bibcite{hibernate}{11}
+\bibcite{spring}{12}
+\bibcite{capicsou-bank-svn}{13}
+\bibcite{parlezvousandroid}{14}
+\bibcite{gatling}{15}
+\bibcite{scala}{16}
+\bibcite{akka}{17}
+\bibcite{jmx}{18}
+\bibcite{sigar}{19}
+\bibcite{metrics}{20}
+\bibcite{hadoop}{21}
+\@writefile{toc}{\contentsline {chapter}{Bibliographie}{46}{chapter*.62}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Charte Excilys{}}{47}{appendix.A}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ann:charte}{{A}{44}{Charte \excilys {}\relax }{appendix.A}{}}
-\@writefile{toc}{\contentsline {chapter}{R\IeC {\'e}sum\IeC {\'e}}{47}{appendix*.51}}
+\newlabel{ann:charte}{{A}{47}{Charte \excilys {}\relax }{appendix.A}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}Test de charge de MF Banking}{49}{appendix.B}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{ann:gatling}{{B}{49}{Test de charge de MF Banking\relax }{appendix.B}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.1}{\ignorespaces Stastiques globales du test : nombre de requ\IeC {\^e}tes r\IeC {\'e}ussies et \IeC {\'e}chou\IeC {\'e}es et d\IeC {\'e}tails du temps de r\IeC {\'e}ponse\relax }}{49}{figure.caption.63}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.2}{\ignorespaces On peut voir que presque toutes les requ\IeC {\^e}tes ont \IeC {\'e}t\IeC {\'e} effectu\IeC {\'e}s en moins de 800 ms\relax }}{49}{figure.caption.64}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.3}{\ignorespaces Nombres d'utilisateurs actifs simultan\IeC {\'e}ment. La mont\IeC {\'e}e progressive du nombres d'utilisateurs au d\IeC {\'e}but est d\IeC {\^u} \IeC {\`a} une \textit  {rampe} : on demande \IeC {\`a} Gatling de prendre 30 secondes pour lancer progressivement les 1000 utilisateurs du test\relax }}{50}{figure.caption.65}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.4}{\ignorespaces Distribution du temps de r\IeC {\'e}ponse : on peut voir que la majorit\IeC {\'e} des requ\IeC {\^e}tes ont \IeC {\'e}t\IeC {\'e} \IeC {\'e}t\IeC {\'e} effectu\IeC {\'e}s quasi instantan\IeC {\'e}ment et que le nombre de requ\IeC {\^e}tes lentes est tellement faible qu'elles n'apparaissent m\IeC {\^e}me pas sur le graphe\relax }}{50}{figure.caption.66}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.5}{\ignorespaces Nombre de requ\IeC {\^e}tes qui d\IeC {\'e}marrent par seconde : on observe qu'une fois la rampe termin\IeC {\'e}e, le syst\IeC {\`e}me se maintient sans difficult\IeC {\'e} entre 800 et 1200 requ\IeC {\^e}tes par seconde\relax }}{51}{figure.caption.67}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.6}{\ignorespaces Nombre de transactions (requ\IeC {\^e}tes qui s'ach\IeC {\`e}vent) par seconde : m\IeC {\^e}mes observations que pour les requ\IeC {\^e}tes, le syst\IeC {\`e}me se maintient durant tout le test entre 800 et 1200 transactions par seconde\relax }}{51}{figure.caption.68}}

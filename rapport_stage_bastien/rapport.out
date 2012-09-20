@@ -1,40 +1,40 @@
-\BOOKMARK [0][-]{chapter*.1}{Remerciements}{}% 1
-\BOOKMARK [0][-]{toc.0}{Table des mati\350res}{}% 2
-\BOOKMARK [0][-]{chapter*.3}{Introduction}{}% 3
-\BOOKMARK [0][-]{chapter.1}{Pr\351sentation de l'entreprise}{}% 4
-\BOOKMARK [1][-]{section.1.1}{Le Groupe Excilys}{chapter.1}% 5
-\BOOKMARK [2][-]{subsection.1.1.1}{Historique du groupe}{section.1.1}% 6
-\BOOKMARK [2][-]{subsection.1.1.2}{La soci\351t\351 eBusiness Information}{section.1.1}% 7
-\BOOKMARK [2][-]{subsection.1.1.3}{Les autres entit\351s du groupe}{section.1.1}% 8
-\BOOKMARK [1][-]{section.1.2}{L'organisation de l'entreprise}{chapter.1}% 9
-\BOOKMARK [2][-]{subsection.1.2.1}{Le service \351quitable - La charte Excilys}{section.1.2}% 10
-\BOOKMARK [2][-]{subsection.1.2.2}{Le syst\350me d'information du groupe}{section.1.2}% 11
-\BOOKMARK [0][-]{chapter.2}{Pr\351sentation du stage}{}% 12
-\BOOKMARK [1][-]{section.2.1}{Sujet du stage}{chapter.2}% 13
-\BOOKMARK [1][-]{section.2.2}{La formation}{chapter.2}% 14
-\BOOKMARK [1][-]{section.2.3}{Gatling}{chapter.2}% 15
-\BOOKMARK [0][-]{chapter.3}{Travail effectu\351}{}% 16
-\BOOKMARK [1][-]{section.3.1}{La formation}{chapter.3}% 17
-\BOOKMARK [2][-]{subsection.3.1.1}{Contenu}{section.3.1}% 18
-\BOOKMARK [2][-]{subsection.3.1.2}{D\351roulement}{section.3.1}% 19
-\BOOKMARK [2][-]{subsection.3.1.3}{Technologies abord\351es}{section.3.1}% 20
-\BOOKMARK [2][-]{subsection.3.1.4}{Formation continue}{section.3.1}% 21
-\BOOKMARK [1][-]{section.3.2}{Mini-projet d'e-banking}{chapter.3}% 22
-\BOOKMARK [2][-]{subsection.3.2.1}{Cahier des charges}{section.3.2}% 23
-\BOOKMARK [2][-]{subsection.3.2.2}{Gestion du projet}{section.3.2}% 24
-\BOOKMARK [2][-]{subsection.3.2.3}{Choix techniques}{section.3.2}% 25
-\BOOKMARK [2][-]{subsection.3.2.4}{Architecture de l'environnement de d\351veloppement}{section.3.2}% 26
-\BOOKMARK [2][-]{subsection.3.2.5}{Architecture du projet}{section.3.2}% 27
-\BOOKMARK [2][-]{subsection.3.2.6}{It\351rations}{section.3.2}% 28
-\BOOKMARK [2][-]{subsection.3.2.7}{Produit final}{section.3.2}% 29
-\BOOKMARK [1][-]{section.3.3}{Gatling}{chapter.3}% 30
-\BOOKMARK [2][-]{subsection.3.3.1}{Pr\351sentation du projet}{section.3.3}% 31
-\BOOKMARK [2][-]{subsection.3.3.2}{Scala}{section.3.3}% 32
-\BOOKMARK [2][-]{subsection.3.3.3}{Akka}{section.3.3}% 33
-\BOOKMARK [2][-]{subsection.3.3.4}{R\351cup\351ration des m\351triques serveurs}{section.3.3}% 34
-\BOOKMARK [2][-]{subsection.3.3.5}{Exposition des m\351triques Gatling}{section.3.3}% 35
-\BOOKMARK [2][-]{subsection.3.3.6}{G\351n\351ration du rapport}{section.3.3}% 36
-\BOOKMARK [0][-]{chapter*.49}{Conclusion}{}% 37
-\BOOKMARK [0][-]{chapter*.50}{Bibliographie}{}% 38
-\BOOKMARK [0][-]{appendix.A}{Charte Excilys}{}% 39
-\BOOKMARK [0][-]{appendix*.51}{R\351sum\351}{}% 40
+\BOOKMARK [0][-]{chapter*.1}{Remerciements}{}
+\BOOKMARK [0][-]{toc.0}{Table des mati\350res}{}
+\BOOKMARK [0][-]{chapter*.3}{Introduction}{}
+\BOOKMARK [0][-]{chapter.1}{Pr\351sentation de l'entreprise}{}
+\BOOKMARK [1][-]{section.1.1}{Le Groupe Excilys}{chapter.1}
+\BOOKMARK [2][-]{subsection.1.1.1}{Historique du groupe}{section.1.1}
+\BOOKMARK [2][-]{subsection.1.1.2}{La soci\351t\351 eBusiness Information}{section.1.1}
+\BOOKMARK [2][-]{subsection.1.1.3}{Les autres entit\351s du groupe}{section.1.1}
+\BOOKMARK [1][-]{section.1.2}{L'organisation de l'entreprise}{chapter.1}
+\BOOKMARK [2][-]{subsection.1.2.1}{Le service \351quitable - La charte Excilys}{section.1.2}
+\BOOKMARK [2][-]{subsection.1.2.2}{Le syst\350me d'information du groupe}{section.1.2}
+\BOOKMARK [0][-]{chapter.2}{Pr\351sentation du stage}{}
+\BOOKMARK [1][-]{section.2.1}{Sujet du stage}{chapter.2}
+\BOOKMARK [1][-]{section.2.2}{La formation}{chapter.2}
+\BOOKMARK [1][-]{section.2.3}{Gatling}{chapter.2}
+\BOOKMARK [0][-]{chapter.3}{Travail effectu\351}{}
+\BOOKMARK [1][-]{section.3.1}{La formation}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.1.1}{Contenu}{section.3.1}
+\BOOKMARK [2][-]{subsection.3.1.2}{D\351roulement}{section.3.1}
+\BOOKMARK [2][-]{subsection.3.1.3}{Technologies abord\351es}{section.3.1}
+\BOOKMARK [2][-]{subsection.3.1.4}{Formation continue}{section.3.1}
+\BOOKMARK [1][-]{section.3.2}{Mini-projet d'e-banking}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.2.1}{Cahier des charges}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.2}{M\351thodologie}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.3}{Choix techniques}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.4}{Architecture du projet}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.5}{Organisation des sprints}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.6}{R\351sultat final}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.7}{Apport personnel}{section.3.2}
+\BOOKMARK [1][-]{section.3.3}{Gatling}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.3.1}{Pr\351sentation du projet}{section.3.3}
+\BOOKMARK [2][-]{subsection.3.3.2}{Scala}{section.3.3}
+\BOOKMARK [2][-]{subsection.3.3.3}{Akka}{section.3.3}
+\BOOKMARK [2][-]{subsection.3.3.4}{R\351cup\351ration des m\351triques serveurs}{section.3.3}
+\BOOKMARK [2][-]{subsection.3.3.5}{Exposition des m\351triques Gatling}{section.3.3}
+\BOOKMARK [2][-]{subsection.3.3.6}{G\351n\351ration du rapport}{section.3.3}
+\BOOKMARK [0][-]{chapter*.61}{Conclusion}{}
+\BOOKMARK [0][-]{chapter*.62}{Bibliographie}{}
+\BOOKMARK [0][-]{appendix.A}{Charte Excilys}{}
+\BOOKMARK [0][-]{appendix.B}{Test de charge de MF Banking}{}

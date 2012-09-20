@@ -1,6 +1,15 @@
 \section{Mini-projet d'e-banking}
 
-À la suite de notre formation, nous avons mis en pratique nos connaissances dans un mini-projet de réalisation d'une application web d'e-banking.
+À la suite de notre formation, nous avons mis en pratique nos connaissances dans un mini-projet de réalisation d'une application web d'e-banking : MF-Bank.\\
+
+Le code source de notre projet ce trouve à l'adresse suivante : \url{https://github.com/excilys-pdalpra/excilys-mfb}.
+
+Une version de l'application est disponible publiquement sur le PaaS Jelastic\cite{jelastic} : \url{ http://mfbanking.j.layershift.co.uk/}. Les identifiants utilisables sont :
+
+\begin{itemize}
+	\item Utilisateur : login : \textit{user} / pswd : \textit{user}
+	\item Administrateur : login : \textit{admin} / pswd : \textit{admin}
+\end{itemize}
 
 \subsection{Cahier des charges}
 
@@ -17,7 +26,9 @@ L'application à réaliser est une application web de gestion des comptes. Les f
 	\item Exposer ces fonctionnalités sous la forme de web services.
 \end{itemize}
 
-\subsection{Gestion du projet}
+\subsection{Méthodologie}
+
+\subsubsection{Gestion du projet}
 
 Étant cinq stagiaires à être arrivés le même jour et un autre la semaine suivante, nous avons formé une équipe de six personnes pour réaliser ce projet. Il nous avait été laissé la possibilité de former deux groupes projet de trois personnes, mais nous avons préférer former une seule équipe et ainsi avoir la possibilité d'approfondir de façon plus importante le projet.\\
 
@@ -51,9 +62,56 @@ Cette méthode permet d'avoir un résultat chaque semaine à montrer au client. 
 
 Pour le développeur, les itérations permettent de ne pas avoir un travail trop répétitif puisque dans chaque itération, on retrouve toutes les phases du cycle en V classique. Il n'y a donc plus de grandes phases de développement, de tests, de recette, \dots{}
 
+La méthode Scrum impose également définir les conditions pour considérer qu'une tâche est terminée (Definition de \og Fini Fini \fg{}). Dans le cadre de l'application d'e-banking, notre définition de \textit{Fini Fini} était la suivante :
+\begin{itemize}
+	\item Développé
+	\item Testé (en local et sur le serveur d'intégration)
+	\item Refactoré
+	\item Revu par un pair
+	\item Documenté (Javadoc)
+\end{itemize}
+
+\subsubsection{Intégration Continue}
+
+Nous avons aussi mis en place une autre pratique Agile : l'intégration continue. C'est un processus de développement issu de la méthode XP. Ceci permet de répondre à un des principes de cette méthode : la capacité de fournir à tout moment une version fonctionnelle de l'application au client.
+
+L'intégration continue repose sur quelques grands principes :
+\begin{itemize}
+	\item Utiliser un logiciel de contrôle de versions
+	\item Automatiser le processus de build
+	\item La build doit être \og auto-testante \fg{} : Les tests doivent être automatiquement exécutés après la compilation.
+	\item La compilation doit rester courte, et ainsi pouvoir builder le projet régulièrement.
+	\item Le résultat de la build doit être visible par tout le monde et les livrables produits facilement accessibles\\
+\end{itemize}
+
+
+\subsubsection{Build incassable}
+
+Enfin dans le but d'automatiser un peu plus notre processus d'intégration continue nous avons mise en place une build incassable, dont le principe est le suivant : conserver en permanence le \textit{trunk} (la branche principale) exempt de bugs, en interdisant aux développeurs de mettre directement à jour celui-ci. Cette tache est laissée au serveur d'intégration continue qui réalise la mise à jour uniquement si le build réussi.\\
+
+Le fonctionnement est le suivant :\\
+\begin{figure}
+	\centering
+		\includegraphics[scale=0.5]{images/build_incassable.pdf}
+	\caption{Worflow dans un système de build incassable}
+\end{figure}
+
+\begin{enumerate}
+	\item Chaque développeur dispose d'une \textit{branche}, une version parallèle des sources du dépôt. Quand des modification ont été effectuées et doivent être synchronisées avec le \textit{trunk}, le développeur \textit{push} ses modifications sur sa branche.
+	\item Le serveur d'intégration continue détecte les modifications apportées sur la branche du développeur, et récupère ses modifications
+	\item	Le serveur d'intégration fusionne alors ces modifications avec sa copie locale du \textit{trunk}
+	\item Une build est alors tentée, afin de vérifier que le code compile bien et que l'ensemble des tests passent\ldots
+	\item Si la build réussit, le serveur d'intégration propage alors les modification sur le trunk
+	\item Les développeurs peuvent alors se synchroniser avec le \textit{trunk}, en étant assuré que l'ensemble est parfaitement fonctionnel
+\end{enumerate}
+L'inconvénient de la build incassable est qu'elle repose sur le respect de bonnes pratiques de codage de la part des développeurs, notamment l'écriture de tests exhaustifs.\\
+En effet, sans une couverture de test adéquat, du code fonctionnement faux peut se retrouver dans la branche principale, pourtant censée ne contenir que du code sûr sur lequel les autres développeurs peuvent s'appuyer sans crainte.  
+
+La procédure que nous avons suivi pour mettre en place ce dispositif est détaillée sur le blog du cabinet d'expertise informatique Octo\cite{build}.
+
 \subsection{Choix techniques}
 
-Le choix des technologies à utiliser était en grande partie libre, même s'il était soumis à l'approbation de Stéphane. Voici les technologies que nous avons choisi :
+Le choix des technologies à utiliser était en grande partie libre, même s'il était soumis à l'approbation de Stéphane. Voici les technologies que nous avons choisi d'utiliser et nos motivations :
 
 \subsubsection{Gestionnaire de version}
 
@@ -125,91 +183,223 @@ REST n'est pas à proprement parlé un protocole mais simplement un type d'archi
 
 Pour la mise en place des web services nous avons choisi Apache CXF puisqu'il permet de faire des web services SOAP et REST en implémentant les respectivement les spécification JaxWS et JaxRS et s'intègre complètement avec Spring.
 
-\subsubsection{Autres technologies}
-
-Nous avons utilisées d'autres technologies sur lesquelles je ne m'étendrai pas sur le choix :
-
-\begin{description}
-	\item[JSTL] Fourni un ensemble de tags pour faciliter l'écriture de pages JSP avec notamment des boucles et des blocs conditionnelles tout en restant complètement du code XML,
-	
-	\item[Liquibase] Permet de versionner la base de données en écrivant des scripts XML agnostique de la BDD s'exécutant lors du déploiement de l'application garantissant ainsi la cohérence entre l'application et le schéma de la base de données,
-	
-	\item[Twitter Bootstrap] Feuille de style CSS pour créer des pages HTML avec un design propre de façon simple et rapide.
-	
-	\item[EHcache] Cache Java distribué. Le cache permet par exemple de soulager la base de données en gardant en mémoire le résultat d'un certain nombre de requête évitant ainsi d'interroger la base à chaque fois.\\
-	
-	
-\end{description}
-
 Ces technologies ont été choisies principalement car elles sont très répandues dans le monde de l'entreprise. Ce mini-projet nous a donc permis de nous faire la main sur les technologies que nous sommes le plus à même de rencontrer en clientèle.
-
-\subsection{Architecture de l'environnement de développement}
-
-Build incassable
-Intégration des tests.
 
 \subsection{Architecture du projet}
 
-Au cours de la première itération nous avons choisi l'architecture à mettre en place pour réaliser notre application. Nous avons choisi d'utiliser une architecture 3-tiers classique. La couche de présentation est implémentée avec le design pattern MVC. Une architecture 3-tiers découpe l'application en 3 couches :
+L'architecture de MF Banking repose sur le modèle de l'architecture $N$-tiers.
+Le principe de cette architecture consiste à découper l'application en plusieurs couches (le plus souvent trois couches), chacune ayant un but très précis. Ce découpage présente deux avantages majeurs :
 
-\begin{description}
-	\item[Persistance] Contient les DAO (Data Acces Object), c'est à dire les classes interagissant directement avec l'ORM pour persister les objets dans la base de données ou pour les récupérer,
-	
-	\item[Application] Contient la logique métier de l'application,
-	
-	\item[Présentation] Permet la présentation des données à l'utilisateur. La couche de présentation est souvent implémentée avec le design pattern MVC qui permet de facilement séparer les données à afficher, la façon de les afficher et les interactions entre le système et l'utilisateur.
-\end{description}
+\begin{itemize}
+	\item chaque couche ayant un but bien précis, celle-ci est plus facile à maintenir. De plus le couplage des différents composants est relativement lâche. 
+	\item Le faible couplage permet aux différentes couches d'\^{e}tre interchangeables.
+\end{itemize}
 
-\begin{figure}[H]
+Il en résulte une application hautement modulaire, où chaque couche peut dans la théorie être remplacée ou mise à jour en ayant un impact réduit sur le reste de l'application.\\
+
+Dans le cas d'une architecture 3-tiers, que nous avons utilisé pour MF Banking, les  couches sont les suivantes :
+
+\begin{figure} [h!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{images/architecture.pdf}
-	\caption{Architecture de l'application}
+		\includegraphics[scale=0.5]{images/ntiers.pdf}
+	\caption{Architecture 3-tiers}
 \end{figure}
 
-Une telle architecture repose sur un principe très simple : une couche utilise uniquement la couche inférieure, ce qui permet de pouvoir séparer les problématiques telles que l'accès aux données, la logique métier, \dots{} On peut aussi remarquer l'ajout des web services qui, à la manière de la couche de présentation, se greffe au-dessus de la couche application.\\
+Le rôle de la couche d'accès aux données est, comme son nom l'indique, d'accès aux données de l'application. Typiquement, cette couche se charge d'accéder à une base de données et d'y récupérer les informations ou d'en stocker des nouvelles.\\
+ 
+La couche de logique métier est le pivot de l'application : c'est dans cette couche qu'est gérée toute la logique propre au métier de l'application que l'on souhaite développer, et sert donc de pont entre les données et la façon dont elles sont présentées à l'utilisateur.\\
 
-D'un point de vue Maven, nous avons découpé le projet en sous modules Maven pour pouvoir facilement construire des parties du projets sans avoir à tout reconstruire. Les sous modules sont les suivants :
+Enfin, la couche de présentation est celle qui est en charge d'afficher les données de l'application.\\
+ 
+Les Web Services que nous avons mis en place s'appuient sur la couche métier et viennent exposer une partie du métier à l'extérieur.\\
+ 
+Les frameworks permettant l'injection de dépendances tels que Spring simplifient grandement la mise en place d'architecture n-tiers.\\
+En effet la possibilité de spécifier les dépendances d'une instance de classe seulement à l'exécution permet de réellement programmer en ne manipulant que des interfaces. On peut ainsi assembler facilement les différentes couches, garantir un minimum de couplage et obtenir une grande modularité de l'application. 
+ 
+\subsubsection{Schéma de la base de données}
+	\begin{figure}[h!]
+		\centering
+			\includegraphics[scale=0.25]{images/diagramme_modele.pdf} 
+		\caption{Modèle E/A de la base de données}
+	\end{figure}
 
-\begin{description}
-	\item[backend] Contient les couches de persistance et application,
-	\item[frontend] Contient la couche de présentation,
-	\item[web services] Contient les web services.\\
-\end{description}
+Lexique des différentes tables :
+\begin{itemize}
+	\item Person : liste des clients de MF Banking
+	\item Role : liste des rôles des utilisateurs (client ou administrateur)
+	\item Authority : table de jointure entre Person et Role. Ceci était nécessaire car un utilisateur pouvait être à la fois client et administrateur  
+	\item Compte : liste des comptes des utilisateurs
+	\item Operation : liste des opérations bancaires effectuées sur les comptes
+	\item OperationType : liste des types d'opérations bancaires (chèque, carte bleue, virement et espèce)
+\end{itemize}
 
-Le backend est un JAR (Java ARchive) spécifié en tant que dépendance des deux autres sous modules. Le frontend est un WAR (Web ARchive) tout comme les web services. L'avantage de ce découpage est qu'il nous permet de déployer sur un serveur uniquement le frontend, c'est à dire l'application web à proprement parlé, ou uniquement les web services ou les deux.
+\subsubsection{Structure}
+Par le biais de Maven, nous avons découpé notre application en plusieurs modules qui suivent l'architecture n-tiers décrite ci-dessus avec une granularité plus fine :
 
-\subsection{Itérations}
+\begin{itemize}
+	\item Entities
+	\item DAO
+	\item Services et Services API
+	\item Batch
+	\item Web
+	\item Webservices
+	\item Application Android
+\end{itemize}
 
-Je vais maintenant passé en revue les différentes itérations pour expliquer dans quel ordre nous avons développé les fonctionnalités.
+\subsubsection*{module Entities}
 
-\subsubsection{Itération 1}
+Ce module regroupe les différentes entités de notre application, miroir objet de notre base de données ainsi que les scripts Liquibase de mise à jour du schéma de base de données.\\
+La librairie Liquibase nous a permis de construire notre schéma de base de données de manière incrémentale  au fil des réalisations de user stories.\\
 
-Pour la première itération, nous avons mis en place la fonctionnalité qui nous semblait absolument nécessaire pour pouvoir développer le reste à savoir la connexion en tant qu'utilisateur. Pour cela nous avons donc commencé à mettre en place la base de données avec la liste des utilisateurs et les rôles, c'est à dire, les simple utilisateurs ou les administrateurs. La connexion est gérée via un module Spring appelé Spring Security.
+\subsubsection*{module DAO}
 
-\subsubsection{Itération 2}
+Le module DAO correspond à la couche d'accès aux données.\\
+DAO est l'acronyme de \textit{Data Access Object} : un DAO est une objet dont le but est d'accéder et de modifier les données stockées par l'application.\\ 
+Sont centralisés dans ce module l'ensemble de la configuration Spring ayant trait à l'accès aux bases de données (connexion, infrastructure Hibernate/JPA, gestion des transactions\ldots) ainsi que le code en charge de la récupération des données depuis la base de données, en se basant sur les entités définies dans le module Entities.\\
 
-Nous avons ensuite développé la consultation de la liste des comptes ainsi que du résumé de chaque compte par mois. Pour ce faire, nous avons implémenté un système de pagination très important dans beaucoup d'application web. En effet, un système de pagination permet de ne pas surcharger les échanges réseaux ainsi que le volume de données à charger depuis la base de données. Dans notre cas, la pagination sert à n'afficher qu'un nombre défini d'opérations pour un compte et un mois donné.
+En production, l'application utilisait une base de données PostgresSQL mais une base de données H2 a été également utilisée pour effectuer des tests unitaires.Cette base, comme les bases Derby et HSQLDB, présente l'avantage de pouvoir fonctionner uniquement en mémoire, ce qui est très adapté dans le cadre de tests unitaires : la base de données est crée, initialisée grâce à Liquibase et des données sont ajoutées le temps d'effectuer les tests unitaires et la base est détruite une fois le test terminé. On a donc des tests unitaires faciles à reproduire, puisqu'ils sont à chaque fois exécutés sur une base de données vierge.\\
 
-\subsubsection{Itération 3}
+Afin de réaliser les tests unitaires, nous nous sommes aidées d'une librairie développée par Stéphane LANDELLE appelée Spring DB-Unit simplifiant grandement l'insertion de données de tests dans la base en mémoire. 
 
-Lors de cette troisième itération, nous avons mis en place les virements. Nous en avons profité pour revoir le fonctionnement de l'application pour s'assurer que celle-ci ne génère que des pages \flqq{}bookmarkable\frqq{} avec des URL simples. Des pages bookmarkable, impliquent que si un utilisateur enregistre l'URL de la page, il doit pouvoir y retourner sans problèmes. Cela veut dire que les pages affichées ne dépendent pas des pages consultées auparavant. Suivre ce principe, permet de rendre l'application plus intuitive et facile d'accès.
+Idéalement, ce module aurait dû être découpé en deux modules, DAO et DAO API, afin de découpler complètement les interfaces et des DAO et leurs implémentations. En l'état, il est théoriquement possible de faire directement référence aux implémentations, bien que cela n'ait pas été fait.\\
+ 
+\subsubsection*{Services et Services API}
 
-\subsubsection{Itération 4}
+Le module Services est le cœur de l'application, où se situe l'ensemble de la logique métier propre a une application d'e-banking.\\
 
-Durant cette dernière itération, nous avons mis en place les web services SOAP et REST.
+Afin de respecter au maximum les bonnes pratiques de codage lié à l'architecture $N$-tiers, nous avons testé les services en isolation, sans qu'ils dépendent des implémentations de la couche DAO, grâce à l'utilisation de mocks.\\
 
-\subsection{Produit final}
+\subsubsection*{Batch}
+
+Comme pour une véritable banque, les opérations de MF Banking dispose d'une date d'effet (date à laquelle l'opération a été enregistrée) et d'une date de valeur (date à laquelle l'opération est prise en compte et le solde modifié en conséquence).\\
+
+Cette modélisation impose cependant de mettre à jour automatiquement le solde du compte lorsque la date de valeur d'une ou plusieurs opérations correspond au jour courant.\\
+Nous avons mis en place cette mise à jour automatique par le biais d'un traitement batch en utilisant Spring Batch : une tâche de mise à jour du solde est exécutée à intervalles réguliers pour tous les comptes de la banque.\\
+
+\subsubsection*{Web}
+
+Le module Web correspond à la couche de présentation de l'architecture $N$-tiers.\\
+Nous avons utilisé le framework Spring MVC pour bâtir notre couche web, car il offrait de nombreux avantages : Spring MVC est parfaitement intégré à Spring et son modèle de programmation est simple et permet de développer rapidement des interactions complexes avec l'utilisateur. Comme son nom le laisse suggérer, Spring MVC tend à se rapprocher d'une architecture Modèle-Vue-Contrôleur.\\
+
+Le module Web est très nettement le module qui a le plus bénéficié de librairies tierces-parties, toujours dans le but de simplifier autant que possible le développement en déléguant les tâches complexes ou répétitives à une librairie.\\
+Nous avons utilisé entre autres : 
+\begin{itemize}
+	\item Bootstrap, développé par Twitter, offre un ensemble cohérent de feuilles de style CSS et de code JS permettant de développer simplement une interface web agréable à utiliser.
+	\item Tiles, librairie de \textit{templating} développée par la fondation Apache.
+	\item Hibernate Validator est l'implémentation de référence de la Java Validation API.Les fonctionnalités offertes par la JSR-303 nous ont permis de simplifier grandement la validation des formulaires de MF Banking.
+	\item POI, API gérant l'écriture de documents Word,Excel et Powerpoint, développé par la fondation Apache.\\
+\end{itemize}
+
+Afin de ne pas permettre à un utilisateur anonyme d'accéder aux comptes de n'importe quel client de MF Banking, notre application a été évidemment sécurisée.Une fois de plus, nous avons utilisé une librairie développée par Spring : Spring Security.\\
+Spring Security permet de s'abstraire d'une large part de la complexité de la sécurisation d'une application, en ne demandant au développeur que de préciser ce qui doit \^etre sécurisé, les rôles pouvant accéder à une ressource sécurisée et le moyen authentifier un utilisateur.
+
+\subsubsection*{WebServices} 
+
+Le module Webservices permet l'exposition d'une partie de la logique métier de l'application dans le but que celle-ci soit utilisé par des applications tierces.\\  
+Nous avons mis en place deux types de Web Services pour MF Banking : des Web Services SOAP et des Web Services REST.\\
+
+Les Web Services SOAP se basent sur l'échange de fichiers XML au format SOAP contenant les informations que les applications doivent se transmettre,en l'occurrence les arguments à passer aux méthodes des Web Services et les valeurs qui sont retournées par ces mêmes méthodes.\\
+Les différents services exposés, les types de données acceptés en entrée et retournés sont exposés via un fichier descripteur, au format WSDL (Web Service Definition Language).\\
+L'avantage et à la fois l'inconvénient du SOAP est qu'il est basé sur le XML : le WSDL est avant tout un schéma XML et les données fournies au Web Service peuvent être validées grâce au WSDL, évitant ainsi d'envoyer des données incohérentes. Par contre, XML est un format de fichier très verbeux, où la quantité de données \og utiles \fg{} est finalement assez faible à cause des balises XML. \\
+L'API Java centré autour de la création de Web Services SOAP se nomme JAX-WS.
+Apache CXF,le framework que nous avons utilisé pour gérer les Web Services, propose deux approches pour générer de nouveaux Web Services ou le code y accédant :
+ 
+\begin{itemize}
+	\item \textit{code first} : on écrit d'abord le code du Web  Service, et les annotations de JAX-WS fournissent les méta-données nécessaires à la génération du fichier WSDL correspondant à ce Web Service
+	\item \textit{contract first} : on écrit d'abord le WSDL et des outils de génération de code se chargent d'écrire le code du Web Service correspondant.\\
+\end{itemize}
+
+Nous avons utilisé ces deux approches pour MF Banking :
+\begin{itemize}
+	\item les Web Services en eux-mêmes étaient \textit{code first}, car nous disposions déjà du code des services (ce qui réduisaient considérablement la quantité de code à écrire) et que l'écriture d'un fichier WSDL s'avérait être une tâche trop complexe à réaliser dans le temps qui nous était imparti.
+	\item les WSDL générés ont été réutilisés pour générer le code des clients des Web Services\\
+\end{itemize}
+
+Les Web Services REST suivent une approche très différente de celle des Web Services SOAP. L'idée de départ des Web Services REST (REpresentational State Transfer) est de se baser sur les différents \og verbes \fg{} du protocole HTTP pour définir le type d'action réalisée par une méthode d'un Web Service : une requête GET récupère des données, une requête POST ajoute ou met à jour un élément, une requête DELETE supprime un élément\ldots.\\
+Contrairement à SOAP, REST n'est pas un standard mais un style de programmation et d'architecture. Il n'y a donc pas de contrainte sur le format des données échangées.\\
+
+\subsubsection*{Application Android}
+
+L'application Android n'était pas une demande explicite du Product Owner, mais celle nous a permis de mettre en oeuvre les Web Services REST que nous avions implémenté.
+
+\begin{figure}[h!]
+	\centering
+		\includegraphics[scale=0.3]{images/diagramme_modules.pdf}
+	\caption{Interaction entre les différents modules de MF Banking}
+\end{figure}  
+
+\subsection{Organisation des sprints}
+
+\begin{itemize}
+	\item Sprint 0 et 1:
+	\begin{itemize}
+		\item Mise en place de l'environnement de développement : Git, Jenkins, SGBD Postgresql et serveur d'applications Tomcat
+		\item Mise en place des conventions de codage (nom des classes et méthodes, formatage du code
+		 \item Item 1 : \textit{Consulter sur ma page d’accueil le solde de mes comptes espèce}
+		 \item Item 6 : \textit{Accéder à ma page de login}
+		 \item Item 7 : \textit{Me logger}
+		 \item Mise en place d'une page d'administration basique, pour démontrer le bon fonctionnement du système de rôles 
+	\end{itemize}
+	\item Sprint 2 :
+	\begin{itemize}
+		\item Item 2 : \textit{Consulter le détail d'un compte espèce avec le détail des opérations pour un mois donné. Les opérations carte sont cumulées sur une seule ligne}
+		\item Item 3 : \textit{Consulter le détail des opérations carte pour un mois donné}
+		\item Item 12 : \textit{Accéder au détail des opérations carte par un clic sur la ligne de cumul dans le détail des opérations compte}
+	\end{itemize}
+	\item Sprint 3 : 
+	\begin{itemize}
+		\item Item 4 : \textit{Réaliser des virements internes}
+		\item Item 5 : \textit{Réaliser des virements externes}
+		\item Item 8 : \textit{Exporter au format Excel le relevé des opérations pour un mois donné. Les opérations ne sont pas cumulées.}
+		\item Item 9 : \textit{Consulter l'historique de mes virements}
+		\item Item 10 : \textit{Consulter sur ma page d'accueil l'encours carte sur chacun de mes comptes espèce}
+		\item Item 11 : \textit{Consulter sur ma page d'accueil le solde prévisionnel de chacun de mes comptes espèce}
+	\end{itemize}
+	\item Sprint 4 :
+	\begin{itemize}
+		\item Ajout de Web Services REST et SOAP
+		\item Amélioration de la zone d'administration : ajout de clients, passage de virements\ldots
+		\item Mise à jour automatique du solde, du solde prévisionnel et de l'encours carte
+		\item Réalisation de deux applications web et d'une application Android pour tester les Web Services
+	\end{itemize}
+\end{itemize}
+
+\subsection{Résultat final}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{images/capicsoubank.pdf}
+	\includegraphics[width=\linewidth]{images/mfb-print-screen.pdf}
 	\caption{Résumé du compte pour le mois d'août}
 \end{figure}
 
-L'application est disponible à l'adresse : \url{http://capicsoubank.j.layershift.co.uk}. Pour se connecter, on peut utiliser le compte avec le nom d'utilisateur \verb+toto+ et le mot de passe \verb+toto+.\\
+\subsection{Apport personnel}
 
-Cette application nous aura permis de terminer notre formation, en nous faisant la main sur les technologies les plus utilisées dans le monde de l'entreprise. Cette application nous a aussi forcé à faire attention à la façon d'implémenter certains aspects d'une application web, notamment à faire attention aux nombres de requêtes par page.\\
+Comme tous les autres membres de l'équipe, j'ai participé au développement de la plupart des fonctionnalités de l'application.\\
+Les méthodes Agiles prônant la polyvalence des développeurs ma contribution a pris plusieurs formes :
+\begin{itemize}
+	\item Recherche et prise en main de librairies pour faciliter le développement.
+	\item Planification des user-stories.  
+	\item Conception du modèle objet et E/A.
+	\item Développement des fonctionnalités en binôme.
+	\item Réalisation de tests.
+	\item Relecture de code.\\
+\end{itemize}
 
-Bien que nous n'avions aucun impératif de performance, nous nous sommes restreints au strict nécessaire en terme d'accès base de données pour garantir un bon fonctionnement, même avec une charge sur le serveur.\\
+J'ai pris part au développement de chacun des modules et ai donc eu l'occasion de travailler sur l'ensemble des technologies mises en œuvre dans MF Banking.\\
+ 
+\subsection*{MF Banking en chiffres}
 
-Enfin, l'utilisation des méthodes Agiles nous a permis de développer rapidement sans avoir le réflexe de tout prévoir avant de véritablement implémenter les fonctionnalités. Avec les méthodes Agiles et toutes les méthodes fonctionnant en itération, il ne faut pas développer plus que nécessaire pour la fonctionnalité en cours. L'avantage est de ne pas avoir de code qui sera peut être utilisé plus tard et qui, en réalité, deviendra très certainement du code mort.
+En résumé, MF Banking, c'est : 
+\begin{itemize}
+	\item 6 développeurs
+	\item 5 semaines de développement
+	\item 444 commits
+	\item 8000 lignes de code
+\end{itemize}
+
+\subsection*{Tests de charge sur MF Banking avec Gatling}
+
+Durant mon travail sur Gatling, et afin de prendre en main cet outil, j'ai été amené à écrire un test de charge de notre application.\\
+Ce test de charge, impliquant l'utilisation simultanée de l'application par 1000 utilisateurs, a montré que notre application résistait bien à la charge et qu'elle était donc relativement performante.\\
+Ce scénario de test a effectué 110000 requêtes sur MF Banking, donc aucune n'a échoué. Le temps moyen de réponse est de 191 ms, avec un temps de réponse maximal de 9,6 secondes (cf. annexe~\ref{ann:gatling}).\\
+Il faut quand même que le scénario de test utilisé n'impliquait pas d'écriture dans la base de données.\\
