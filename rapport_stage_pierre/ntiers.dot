@@ -1,9 +1,0 @@
-digraph G {
-	node [shape=box]
-	dao [label="Couche d'accès aux données"]
-	service [label="Couche de logique métier"]
-	controller [label="Couche de présentation"]
-
-	controller -> service [dir=back]
-	service -> dao [dir=back]
-}
