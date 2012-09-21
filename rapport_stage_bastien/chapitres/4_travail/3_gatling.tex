@@ -96,6 +96,7 @@ Actuellement, les mesures prises par Gatling ne concernent que ce qu'un utilisat
 La première fonctionnalité que Stéphane LANDELLE souhaitait que nous étudions été le monitoring de l'application testée, c\^oté serveur.\\
 
 Ce choix était motivé par deux raisons :
+
 \begin{itemize}
 	\item Bien qu'étant open source, Gatling reste en concurrence avec d'autres solutions, et plusieurs d'entre elles proposent du monitoring c\^oté serveur ou comptent en intégrer dans un futur proche. Intégrer du monitoring c\^oté serveur  dans Gatling permettrait donc à celui-ci de ne pas prendre de retard sur la concurrence.
 	\item Monitorer l'application testée permettrait d'obtenir de précieuses informations sur le comportement de l'application durant le test que ça soit en terme d'utilisation CPU, de mémoire, d'activité des bases de données\ldots En recoupant ces informations avec celles déjà existantes, cela permettrait d'obtenir des rapports encore plus pertinents.\\
@@ -279,3 +280,42 @@ L'utilisation de Cascading en mode local, nous aura permis de comprendre la néc
 Scalding s'est avéré être très utile car l'écriture du traitement est beaucoup moins verbeuse et plus intuitive qu'en Cascading, cependant, cette librarie créée par Twitter est très mal conçue car elle dépend fortement de Hadoop, même si on utilise le mode local de Cascading. On est donc obligé d'avoir une dépendance à Hadoop bien que nous ne l'utilisons pas.
 
 \subsection{Plugin Jenkins}
+
+Le dernier chantier auquel j'ai participé est la conception et la réalisation d'un plugin Jenkins permettant d'intégrer le suivi d'une simulation Gatling.\\
+
+Jenkins \cite{jenkins}, anciennement Hudson, est le serveur d'intégration le plus utilisé dans le monde Java. Un tel outil permet de récupérer les source du projet sur un dépôt distant, de construire le projet, par exemple à l'aide de Maven, et enfin de réaliser un certain nombre d'actions en fonction de la réussite ou non de la construction du projet. Tout ce processus peut être planifié par exemple à chaque \textit{push} sur le VCS ou à heure fixe.
+
+Une des grande force de Jenkins est la possibilité de réalisé des plugin pour celui-ci, ce qui le rend modulaire et personnalisable.\\ 
+
+La réalisation de ce plugin a été motivée par plusieurs raisons :
+
+\begin{itemize}
+	\item Le principal concurrent de Gatling, JMeter, offre une tel intégration à Jenkins au travers du Performance Plugin \cite{perfplugin}, qui compte plus de 2500 utilisateurs.
+	\item Gatling offre déjà un plugin Maven qui permet de lancer une simulation lors du build. Ainsi offrir le suivit de celle-ci dans Jenkins est une évolution logique.
+	\item Enfin cette intégration est demandée depuis un certain temps par la communauté d'utilisateur de Gatling.
+\end{itemize}
+
+\subsubsection{Conception}
+
+La première piste que nous avons explorée a été non pas de réaliser un nouveau plugin mais d'intégrer Gatling au Performance Plugin déjà existant. Pour pouvoir réalisé ceci, il fallait écrire le journal Gatling au format de celui de JMeter. Cette étape a été relativement facile à réaliser. Nous avons donc eu rapidement une intégration de Gatling dans Jenkins. Cependant en testant cette solution nous nous sommes rendu compte que le performance Plugin avait de graves problèmes de performance. Celui-ci était fonctionnel seulement si le journal généré était de très petite taille, de l'ordre de quelques méga-octets. Cette solution n'était donc pas viable.\\
+
+La seconde piste que nous avons étudié a été la réalisation d'un plugin Jenkins entièrement dédié à Gatling.
+En s'inspirant du Performance Plugin et en prenant en compte les désirs des utilisateurs de Gatling nous avons identifié les fonctionnalités suivantes comme primordiales :
+
+\begin{itemize}
+	\item Pouvoir de définir des conditions d'échec ou d'instabilité de la build en fonction  des résultats de la simulation Gatling.
+	\item Pouvoir visualiser l'évolution des performances de l'application au cours du temps.
+	\item Pouvoir accéder aux rapports Gatling directement dans l'interface de Jenkins.
+\end{itemize}
+
+\subsubsection{Réalisation}
+
+Nous avons donc réalisé ces trois fonctionnalités. La réalisation du plugin n'a pas été aisé en raison du manque criant de documentation. Jenkins ainsi que ses plugin s'appuie sur des technologies développées par son créateur  Kohsuke Kawaguchi. Ces technologies sont peu utilisées, à part dans Jenkins, et surtout peu documentées alors même qu'elles s'appuie sur le principe de \textit{convention over configuration}.
+
+La réalisation du plugin se fait en implémentant les interfaces adéquates. Chaque interface permettant d'étendre un comportement. Le framework web utilisé par Jenkins est Stapler \cite{stapler}, l'outil pour réalisé les vues est Jelly \cite{jelly}. L'écriture d'un plugin nécessite l'utilisation de ces outils et leur compréhension.
+
+Pour réaliser les différents graphiques nous avons décidé de ne pas nous appuyer sur la solution intégrée à Jenkins, qui se base sur JFreeChart, mais de plutôt utiliser jQPlot \cite{jqplot}, un plugin jQuery, qui permet de faire des graphiques plus dynamiques et plus beau.
+
+\subsubsection{Résultat}
+
+Le plugin Jenkins que nous avons développé est actuellement fonctionnel (cf. annexe~\ref{ann:jenkins}). Il devrait être prochainement testé par des utilisateurs. Ce qui nous permettra de réaliser quelques ajustements. Ce projet n'est pas directement intégré au projet Gatling, mais est à part \cite{gatlingplugin}, ce qui lui permettra d'évoluer en parallèle de Gatling. 

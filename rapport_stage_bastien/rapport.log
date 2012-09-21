@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.9.11)  20 SEP 2012 17:58
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.9.11)  21 SEP 2012 15:55
 entering extended mode
  %&-line parsing enabled.
 **rapport.tex
@@ -959,7 +959,7 @@ LaTeX Info: Redefining \pageref on input line 82.
 
 \AtBeginShipoutBox=\box45
 \c@lstlisting=\count157
- <images/logo-ecn.pdf, id=170, 437.9562pt x 505.89pt>
+ <images/logo-ecn.pdf, id=178, 437.9562pt x 505.89pt>
 File: images/logo-ecn.pdf Graphic file (type pdf)
 
 <use images/logo-ecn.pdf> [1
@@ -983,13 +983,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
-) <images/header.pdf, id=182, 627.3046pt x 82.388pt>
+) <images/header.pdf, id=190, 627.3046pt x 82.388pt>
 File: images/header.pdf Graphic file (type pdf)
  <use images/header.pdf>
-<images/excilys.pdf, id=183, 154.5775pt x 82.3075pt>
+<images/excilys.pdf, id=191, 154.5775pt x 82.3075pt>
 File: images/excilys.pdf Graphic file (type pdf)
  <use images/excilys.pdf>
-<images/ebusiness.pdf, id=184, 195.73125pt x 74.2775pt>
+<images/ebusiness.pdf, id=192, 195.73125pt x 74.2775pt>
 File: images/ebusiness.pdf Graphic file (type pdf)
 
 <use images/ebusiness.pdf>
@@ -1002,7 +1002,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 Package xcolor Warning: Incompatible color definition on input line 121.
 
-<images/volutebas.pdf, id=185, 849.4154pt x 330.034pt>
+<images/volutebas.pdf, id=193, 849.4154pt x 330.034pt>
 File: images/volutebas.pdf Graphic file (type pdf)
 
 <use images/volutebas.pdf>pdfTeX warning (ext4): destination with the same iden
@@ -1040,9 +1040,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 
-Package xcolor Warning: Incompatible color definition on input line 72.
+Package xcolor Warning: Incompatible color definition on input line 76.
 
-<images/volutebasVerso.pdf, id=250, 849.4154pt x 330.034pt>
+<images/volutebasVerso.pdf, id=258, 849.4154pt x 330.034pt>
 File: images/volutebasVerso.pdf Graphic file (type pdf)
 
 <use images/volutebasVerso.pdf> [2
@@ -1139,7 +1139,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
  []
 
-<images/diag_metier.pdf, id=281, 862.22125pt x 584.1825pt>
+<images/diag_metier.pdf, id=291, 862.22125pt x 584.1825pt>
 File: images/diag_metier.pdf Graphic file (type pdf)
 
 <use images/diag_metier.pdf>
@@ -1147,7 +1147,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
-<images/pie_ca.pdf, id=282, 554.00078pt x 235.85213pt>
+<images/pie_ca.pdf, id=292, 554.00078pt x 235.85213pt>
 File: images/pie_ca.pdf Graphic file (type pdf)
  <use images/pie_ca.pdf>
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1179,7 +1179,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
-<images/diag_ca.pdf, id=293, 480.73602pt x 230.83339pt>
+<images/diag_ca.pdf, id=303, 480.73602pt x 230.83339pt>
 File: images/diag_ca.pdf Graphic file (type pdf)
 
 <use images/diag_ca.pdf>
@@ -1203,7 +1203,7 @@ Package xcolor Warning: Incompatible color definition on input line 57.
 
 File: images/volutebas.pdf Graphic file (type pdf)
 <use images/volutebas.pdf> [7 <./images/pie_ca.pdf> <./images/diag_ca.pdf>]
-<images/diag_equi.pdf, id=309, 1204.34941pt x 783.03442pt>
+<images/diag_equi.pdf, id=319, 1204.34941pt x 783.03442pt>
 File: images/diag_equi.pdf Graphic file (type pdf)
 
 <use images/diag_equi.pdf>
@@ -1236,7 +1236,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
 
-<images/diag_si.pdf, id=315, 971.63pt x 1174.3875pt>
+<images/diag_si.pdf, id=325, 971.63pt x 1174.3875pt>
 File: images/diag_si.pdf Graphic file (type pdf)
  <use images/diag_si.pdf>)
 File: images/header.pdf Graphic file (type pdf)
@@ -1381,7 +1381,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
-<images/capico.pdf, id=349, 976.27534pt x 599.91628pt>
+<images/capico.pdf, id=359, 976.27534pt x 599.91628pt>
 File: images/capico.pdf Graphic file (type pdf)
  <use images/capico.pdf>
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1604,7 +1604,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
-<images/build_incassable.pdf, id=425, 722.60963pt x 541.95773pt>
+<images/build_incassable.pdf, id=435, 722.60963pt x 541.95773pt>
 File: images/build_incassable.pdf Graphic file (type pdf)
 
 <use images/build_incassable.pdf>
@@ -1758,7 +1758,7 @@ Overfull \hbox (5.12769pt too wide) in paragraph at lines 200--201
 -isé pour MF Bank-ing, les couches
  []
 
-<images/ntiers.pdf, id=467, 276.03125pt x 251.94125pt>
+<images/ntiers.pdf, id=477, 276.03125pt x 251.94125pt>
 File: images/ntiers.pdf Graphic file (type pdf)
  <use images/ntiers.pdf>
 Underfull \hbox (badness 10000) in paragraph at lines 208--209
@@ -1802,7 +1802,7 @@ Overfull \hbox (4.59851pt too wide) in paragraph at lines 216--218
 ls que Spring sim-pli-fient grande-
  []
 
-<images/diagramme_modele.pdf, id=481, 1527.9082pt x 647.30032pt>
+<images/diagramme_modele.pdf, id=491, 1527.9082pt x 647.30032pt>
 File: images/diagramme_modele.pdf Graphic file (type pdf)
 
 <use images/diagramme_modele.pdf>
@@ -1931,7 +1931,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 318--320
 
  []
 
-<images/diagramme_modules.pdf, id=506, 1422.6349pt x 793.83177pt>
+<images/diagramme_modules.pdf, id=516, 1422.6349pt x 793.83177pt>
 File: images/diagramme_modules.pdf Graphic file (type pdf)
 
 <use images/diagramme_modules.pdf>
@@ -1973,7 +1973,7 @@ Package xcolor Warning: Incompatible color definition on input line 357.
 
 File: images/volutebasVerso.pdf Graphic file (type pdf)
 <use images/volutebasVerso.pdf> [30 <./images/diagramme_modules.pdf>]
-<images/mfb-print-screen.pdf, id=523, 1912.90662pt x 942.40381pt>
+<images/mfb-print-screen.pdf, id=533, 1912.90662pt x 942.40381pt>
 File: images/mfb-print-screen.pdf Graphic file (type pdf)
 
 <use images/mfb-print-screen.pdf>
@@ -2038,7 +2038,7 @@ Overfull \hbox (0.66534pt too wide) in paragraph at lines 3--4
 sta-giaires, Stéphane LAN-DELLE
  []
 
-<images/logo_gatling.pdf, id=543, 275.0275pt x 90.3375pt>
+<images/logo_gatling.pdf, id=553, 275.0275pt x 90.3375pt>
 File: images/logo_gatling.pdf Graphic file (type pdf)
 
 <use images/logo_gatling.pdf>
@@ -2081,7 +2081,7 @@ File: images/volutebas.pdf Graphic file (type pdf)
 
 
  <./images/logo_gatling.pdf>]
-<images/req_details_basic_usage.pdf, id=559, 924.33833pt x 998.60677pt>
+<images/req_details_basic_usage.pdf, id=569, 924.33833pt x 998.60677pt>
 File: images/req_details_basic_usage.pdf Graphic file (type pdf)
 
 <use images/req_details_basic_usage.pdf>
@@ -2148,7 +2148,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
 
-<images/gatling-process.pdf, id=581, 1296.845pt x 951.555pt>
+<images/gatling-process.pdf, id=591, 1296.845pt x 951.555pt>
 File: images/gatling-process.pdf Graphic file (type pdf)
 
 <use images/gatling-process.pdf>
@@ -2182,17 +2182,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--97
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--109
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
 
  []
 
@@ -2213,24 +2213,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 
-Package xcolor Warning: Incompatible color definition on input line 109.
+Package xcolor Warning: Incompatible color definition on input line 110.
 
 File: images/volutebas.pdf Graphic file (type pdf)
 <use images/volutebas.pdf> [37 <./images/gatling-process.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 110--111
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
 
  []
 
-<images/jvisualvm.pdf, id=603, 883.69148pt x 524.64507pt>
+<images/jvisualvm.pdf, id=613, 883.69148pt x 524.64507pt>
 File: images/jvisualvm.pdf Graphic file (type pdf)
 
 <use images/jvisualvm.pdf>
-Underfull \hbox (badness 10000) in paragraph at lines 121--122
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 127--128
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
 
  []
 
@@ -2247,42 +2247,42 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 
-Package xcolor Warning: Incompatible color definition on input line 128.
+Package xcolor Warning: Incompatible color definition on input line 129.
 
 File: images/volutebasVerso.pdf Graphic file (type pdf)
 <use images/volutebasVerso.pdf> [38 <./images/jvisualvm.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
 
-Overfull \hbox (16.20876pt too wide) in paragraph at lines 133--134
+Overfull \hbox (16.20876pt too wide) in paragraph at lines 134--135
 \T1/ppl/m/n/12 récupérer. Ces son-des peu-vent bien évidem-ment tirer par-tie d
 e JMX pour ex-poser les métriques. 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--138
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
 
@@ -2299,46 +2299,46 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 
-Package xcolor Warning: Incompatible color definition on input line 154.
+Package xcolor Warning: Incompatible color definition on input line 155.
 
 File: images/volutebas.pdf Graphic file (type pdf)
 <use images/volutebas.pdf> [39]
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--158
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--168
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--173
+Underfull \hbox (badness 10000) in paragraph at lines 173--174
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--180
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--186
+Underfull \hbox (badness 10000) in paragraph at lines 186--187
 
  []
 
@@ -2355,36 +2355,36 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 
-Package xcolor Warning: Incompatible color definition on input line 186.
+Package xcolor Warning: Incompatible color definition on input line 187.
 
 File: images/volutebasVerso.pdf Graphic file (type pdf)
 <use images/volutebasVerso.pdf> [40]
-Underfull \hbox (badness 10000) in paragraph at lines 191--192
+Underfull \hbox (badness 10000) in paragraph at lines 192--193
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--198
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--201
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--207
+Underfull \hbox (badness 10000) in paragraph at lines 207--208
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 220--221
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--223
+Underfull \hbox (badness 10000) in paragraph at lines 223--224
 
  []
 
@@ -2401,35 +2401,35 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 
-Package xcolor Warning: Incompatible color definition on input line 223.
+Package xcolor Warning: Incompatible color definition on input line 224.
 
 File: images/volutebas.pdf Graphic file (type pdf)
 <use images/volutebas.pdf> [41]
-Underfull \hbox (badness 10000) in paragraph at lines 228--229
+Underfull \hbox (badness 10000) in paragraph at lines 229--230
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 230--231
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 236--237
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--239
+Underfull \hbox (badness 10000) in paragraph at lines 239--240
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--241
+Underfull \hbox (badness 10000) in paragraph at lines 241--242
 
  []
 
-<images/cascading.pdf, id=642, 583.17876pt x 705.63625pt>
+<images/cascading.pdf, id=652, 583.17876pt x 705.63625pt>
 File: images/cascading.pdf Graphic file (type pdf)
 
 <use images/cascading.pdf>
@@ -2447,11 +2447,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 
-Package xcolor Warning: Incompatible color definition on input line 247.
+Package xcolor Warning: Incompatible color definition on input line 248.
 
 File: images/volutebasVerso.pdf Graphic file (type pdf)
 <use images/volutebasVerso.pdf> [42]
-<images/cascading_real.pdf, id=651, 521.95pt x 785.93625pt>
+<images/cascading_real.pdf, id=661, 521.95pt x 785.93625pt>
 File: images/cascading_real.pdf Graphic file (type pdf)
 
 <use images/cascading_real.pdf>
@@ -2471,21 +2471,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 
-Package xcolor Warning: Incompatible color definition on input line 254.
+Package xcolor Warning: Incompatible color definition on input line 255.
 
 File: images/volutebas.pdf Graphic file (type pdf)
 <use images/volutebas.pdf> [43 <./images/cascading.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 255--256
+Underfull \hbox (badness 10000) in paragraph at lines 256--257
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--258
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 259--260
+Underfull \hbox (badness 10000) in paragraph at lines 260--261
 
  []
 
@@ -2502,27 +2502,27 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 
-Package xcolor Warning: Incompatible color definition on input line 260.
+Package xcolor Warning: Incompatible color definition on input line 261.
 
 File: images/volutebasVerso.pdf Graphic file (type pdf)
 <use images/volutebasVerso.pdf> [44 <./images/cascading_real.pdf>]
-Overfull \hbox (3.41241pt too wide) in paragraph at lines 266--267
+Overfull \hbox (3.41241pt too wide) in paragraph at lines 267--268
 []\T1/ppl/m/n/12 Lecture com-plète du fichier pour déter-miner des valeurs géné
 rales néces-saires au traite-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--269
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--272
+Underfull \hbox (badness 10000) in paragraph at lines 272--273
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 277--278
+Underfull \hbox (badness 10000) in paragraph at lines 278--279
 
  []
 
@@ -2539,10 +2539,41 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 
-Package xcolor Warning: Incompatible color definition on input line 280.
+Package xcolor Warning: Incompatible color definition on input line 281.
 
 File: images/volutebas.pdf Graphic file (type pdf)
-<use images/volutebas.pdf> [45])
+<use images/volutebas.pdf> [45]
+Underfull \hbox (badness 10000) in paragraph at lines 284--285
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 288--289
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 300--301
+
+ []
+
+File: images/header.pdf Graphic file (type pdf)
+<use images/header.pdf>
+File: images/excilys.pdf Graphic file (type pdf)
+ <use images/excilys.pdf>
+File: images/ebusiness.pdf Graphic file (type pdf)
+ <use images/ebusiness.pdf>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+
+Package xcolor Warning: Incompatible color definition on input line 314.
+
+File: images/volutebasVerso.pdf Graphic file (type pdf)
+<use images/volutebasVerso.pdf> [46])
 File: images/header.pdf Graphic file (type pdf)
  <use images/header.pdf>
 File: images/excilys.pdf Graphic file (type pdf)
@@ -2559,8 +2590,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 Package xcolor Warning: Incompatible color definition on input line 17.
 
-File: images/volutebasVerso.pdf Graphic file (type pdf)
-<use images/volutebasVerso.pdf> [46]) (./chapitres/5_conclusion.tex
+File: images/volutebas.pdf Graphic file (type pdf)
+<use images/volutebas.pdf> [47]) (./chapitres/5_conclusion.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
@@ -2592,14 +2623,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 Package xcolor Warning: Incompatible color definition on input line 1.
 
-File: images/volutebas.pdf Graphic file (type pdf)
-<use images/volutebas.pdf> [47
+File: images/volutebasVerso.pdf Graphic file (type pdf)
+<use images/volutebasVerso.pdf> [48
 
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 8--9
 []\T1/ppl/m/n/12 Principe du build in-cass-able : [][]$\T1/cmtt/m/n/12 http : /
  / blog . octo . com /
+ []
+
+
+Underfull \hbox (badness 6461) in paragraph at lines 26--27
+[]\T1/ppl/m/n/12 Jenkins Per-for-mance Plu-gin : [][]$\T1/cmtt/m/n/12 https : /
+ / wiki . jenkins-[]ci . org / display / JENKINS /
  []
 
 ) (./chapitres/7_annexes.tex
@@ -2619,8 +2656,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 Package xcolor Warning: Incompatible color definition on input line 3.
 
-File: images/volutebasVerso.pdf Graphic file (type pdf)
-<use images/volutebasVerso.pdf> [48
+File: images/volutebas.pdf Graphic file (type pdf)
+<use images/volutebas.pdf> [49
 
 ]
 Annexe A.
@@ -2639,11 +2676,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 Package xcolor Warning: Incompatible color definition on input line 5.
 
-File: images/volutebas.pdf Graphic file (type pdf)
-<use images/volutebas.pdf> [49
+File: images/volutebasVerso.pdf Graphic file (type pdf)
+<use images/volutebasVerso.pdf> [50
 
 ]
-<annexes/charte_excilys.pdf, id=721, page=1, 597.23125pt x 845.0471pt>
+<annexes/charte_excilys.pdf, id=757, page=1, 597.23125pt x 845.0471pt>
 File: annexes/charte_excilys.pdf Graphic file (type pdf)
 
 <use annexes/charte_excilys.pdf, page 1>
@@ -2658,37 +2695,37 @@ File: annexes/charte_excilys.pdf Graphic file (type pdf)
 <use annexes/charte_excilys.pdf, page 1>
 File: annexes/charte_excilys.pdf Graphic file (type pdf)
 
-<use annexes/charte_excilys.pdf, page 1> [50 <./annexes/charte_excilys.pdf>]
+<use annexes/charte_excilys.pdf, page 1> [51 <./annexes/charte_excilys.pdf>]
 Annexe B.
-<images/global.pdf, id=945, 302.0906pt x 308.11311pt>
+<images/global.pdf, id=981, 302.0906pt x 308.11311pt>
 File: images/global.pdf Graphic file (type pdf)
  <use images/global.pdf>
-<images/indicators.pdf, id=946, 634.29073pt x 309.11687pt>
+<images/indicators.pdf, id=982, 634.29073pt x 309.11687pt>
 File: images/indicators.pdf Graphic file (type pdf)
 
 <use images/indicators.pdf>
-<images/active-sessions.pdf, id=947, 905.2691pt x 357.29083pt>
+<images/active-sessions.pdf, id=983, 905.2691pt x 357.29083pt>
 File: images/active-sessions.pdf Graphic file (type pdf)
 
 <use images/active-sessions.pdf>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/response-time.pdf, id=948, 906.27286pt x 358.29356pt>
+<images/response-time.pdf, id=984, 906.27286pt x 358.29356pt>
 File: images/response-time.pdf Graphic file (type pdf)
 
 <use images/response-time.pdf>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/requests.pdf, id=949, 905.2691pt x 356.28708pt>
+<images/requests.pdf, id=985, 905.2691pt x 356.28708pt>
 File: images/requests.pdf Graphic file (type pdf)
 
 <use images/requests.pdf>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/transactions.pdf, id=950, 906.27286pt x 357.29083pt>
+<images/transactions.pdf, id=986, 906.27286pt x 357.29083pt>
 File: images/transactions.pdf Graphic file (type pdf)
 
 <use images/transactions.pdf>
@@ -2710,28 +2747,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 Package xcolor Warning: Incompatible color definition on input line 45.
 
-File: images/volutebas.pdf Graphic file (type pdf)
-<use images/volutebas.pdf> [51
+File: images/volutebasVerso.pdf Graphic file (type pdf)
+<use images/volutebasVerso.pdf> [52
 
  <./images/global.pdf> <./images/indicators.pdf>]
-File: images/header.pdf Graphic file (type pdf)
-<use images/header.pdf>
-File: images/excilys.pdf Graphic file (type pdf)
- <use images/excilys.pdf>
-File: images/ebusiness.pdf Graphic file (type pdf)
- <use images/ebusiness.pdf>
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-
-Package xcolor Warning: Incompatible color definition on input line 45.
-
-File: images/volutebasVerso.pdf Graphic file (type pdf)
-<use images/volutebasVerso.pdf> [52 <./images/active-sessions.pdf> <./images/re
-sponse-time.pdf>]
 File: images/header.pdf Graphic file (type pdf)
  <use images/header.pdf>
 File: images/excilys.pdf Graphic file (type pdf)
@@ -2749,13 +2768,32 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 Package xcolor Warning: Incompatible color definition on input line 45.
 
 File: images/volutebas.pdf Graphic file (type pdf)
-<use images/volutebas.pdf> [53 <./images/requests.pdf> <./images/transactions.p
-df>]
+<use images/volutebas.pdf> [53 <./images/active-sessions.pdf> <./images/respons
+e-time.pdf>]
+File: images/header.pdf Graphic file (type pdf)
+ <use images/header.pdf>
+File: images/excilys.pdf Graphic file (type pdf)
+ <use images/excilys.pdf>
+File: images/ebusiness.pdf Graphic file (type pdf)
+
+<use images/ebusiness.pdf>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+
+Package xcolor Warning: Incompatible color definition on input line 45.
+
+File: images/volutebasVerso.pdf Graphic file (type pdf)
+<use images/volutebasVerso.pdf> [54 <./images/requests.pdf> <./images/transacti
+ons.pdf>]
 Annexe C.
-<images/benchmark-monitoring.pdf, id=993, 704.6325pt x 797.98125pt>
+<images/benchmark-monitoring.pdf, id=1030, 704.6325pt x 797.98125pt>
 File: images/benchmark-monitoring.pdf Graphic file (type pdf)
 
-<use images/benchmark-monitoring.pdf>)
+<use images/benchmark-monitoring.pdf>
 File: images/header.pdf Graphic file (type pdf)
  <use images/header.pdf>
 File: images/excilys.pdf Graphic file (type pdf)
@@ -2770,32 +2808,119 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+File: images/volutebas.pdf Graphic file (type pdf)
+<use images/volutebas.pdf> [55
+
+ <./images/benchmark-monitoring.pdf>]
+Annexe D.
+<images/jenkins-conf.pdf, id=1040, 1500.4156pt x 580.09521pt>
+File: images/jenkins-conf.pdf Graphic file (type pdf)
+
+<use images/jenkins-conf.pdf>
+Overfull \hbox (41.45647pt too wide) in paragraph at lines 57--58
+ [][] 
+ []
+
+<images/jenkins-dashboard.pdf, id=1041, 1924.95161pt x 944.41032pt>
+File: images/jenkins-dashboard.pdf Graphic file (type pdf)
+
+<use images/jenkins-dashboard.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<images/jenkins-projet.pdf, id=1042, 1529.52435pt x 956.45428pt>
+File: images/jenkins-projet.pdf Graphic file (type pdf)
+
+<use images/jenkins-projet.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<images/jenkins-build.pdf, id=1043, 1908.89162pt x 964.4833pt>
+File: images/jenkins-build.pdf Graphic file (type pdf)
+
+<use images/jenkins-build.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+)
+File: images/header.pdf Graphic file (type pdf)
+ <use images/header.pdf>
+File: images/excilys.pdf Graphic file (type pdf)
+ <use images/excilys.pdf>
+File: images/ebusiness.pdf Graphic file (type pdf)
+ <use images/ebusiness.pdf>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+
 Package xcolor Warning: Incompatible color definition on input line 139.
 
 File: images/volutebasVerso.pdf Graphic file (type pdf)
-<use images/volutebasVerso.pdf> [54
+<use images/volutebasVerso.pdf> [56
 
- <./images/benchmark-monitoring.pdf>]
+ <./images/jenkins-conf.pdf>]
+File: images/header.pdf Graphic file (type pdf)
+
+<use images/header.pdf>
+File: images/excilys.pdf Graphic file (type pdf)
+ <use images/excilys.pdf>
+File: images/ebusiness.pdf Graphic file (type pdf)
+ <use images/ebusiness.pdf>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+File: images/volutebas.pdf Graphic file (type pdf)
+<use images/volutebas.pdf> [57 <./images/jenkins-dashboard.pdf> <./images/jenki
+ns-projet.pdf>]
+File: images/header.pdf Graphic file (type pdf)
+ <use images/header.pdf>
+File: images/excilys.pdf Graphic file (type pdf)
+ <use images/excilys.pdf>
+File: images/ebusiness.pdf Graphic file (type pdf)
+
+<use images/ebusiness.pdf>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+File: images/volutebasVerso.pdf Graphic file (type pdf)
+<use images/volutebasVerso.pdf> [58 <./images/jenkins-build.pdf>]
 (./rapport.aux (./chapitres/4_travail/1_formation.aux)
 (./chapitres/4_travail/2_ebanking.aux) (./chapitres/4_travail/3_gatling.aux)) )
  
 Here is how much of TeX's memory you used:
- 17994 strings out of 495061
- 282622 string characters out of 1182621
- 364193 words of memory out of 3000000
- 20509 multiletter control sequences out of 15000+50000
+ 18041 strings out of 495061
+ 283490 string characters out of 1182621
+ 366433 words of memory out of 3000000
+ 20534 multiletter control sequences out of 15000+50000
  30933 words of font info for 60 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 54i,18n,75p,947b,567s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 54i,18n,75p,947b,564s stack positions out of 5000i,500n,10000p,200000b,50000s
  </home/excilys/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk>{/usr/sha
 re/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/ty
 pe1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/type1/public/
 eurosym/feymr10.pfb></usr/share/texmf-texlive/fonts/type1/urw/palatino/uplb8a.p
 fb></usr/share/texmf-texlive/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/te
 xmf-texlive/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on rapport.pdf (55 pages, 3662944 bytes).
+Output written on rapport.pdf (59 pages, 4105084 bytes).
 PDF statistics:
- 1121 PDF objects out of 1200 (max. 8388607)
- 209 named destinations out of 1000 (max. 500000)
- 506 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1205 PDF objects out of 1440 (max. 8388607)
+ 227 named destinations out of 1000 (max. 500000)
+ 542 words of extra memory for PDF output out of 10000 (max. 10000000)
 
