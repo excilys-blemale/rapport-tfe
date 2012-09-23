@@ -3,18 +3,21 @@
 \catcode`;\active
 \catcode`!\active
 \catcode`?\active
-\ifx\hyper@anchor\@undefined
-\global \let \oldcontentsline\contentsline
-\gdef \contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
-\global \let \oldnewlabel\newlabel
-\gdef \newlabel#1#2{\newlabelxx{#1}#2}
-\gdef \newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
-\AtEndDocument{\let \contentsline\oldcontentsline
-\let \newlabel\oldnewlabel}
-\else
-\global \let \hyper@last\relax 
-\fi
-
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
 \select@language{french}
 \@writefile{toc}{\select@language{french}}
 \@writefile{lof}{\select@language{french}}
@@ -28,29 +31,29 @@
 \@writefile{toc}{\contentsline {section}{\numberline {1.1}Le Groupe Excilys{}{}}{5}{section.1.1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.1.1}Historique du groupe}{5}{subsection.1.1.1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.1.2}La soci\IeC {\'e}t\IeC {\'e} eBusiness Information{}}{5}{subsection.1.1.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces Les 4 m\IeC {\'e}tiers\relax }}{6}{figure.caption.4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces R\IeC {\'e}partition du chiffre d'affaires par secteur d'activit\IeC {\'e}\relax }}{7}{figure.caption.5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.3}{\ignorespaces \IeC {\'E}volution du chiffre d'affaires\relax }}{7}{figure.caption.6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.3}Les autres entit\IeC {\'e}s du groupe}{8}{subsection.1.1.3}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.2}L'organisation de l'entreprise}{8}{section.1.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}Le service \IeC {\'e}quitable - La charte Excilys{}}{8}{subsection.1.2.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces Les 4 m\IeC {\'e}tiers\relax }}{7}{figure.caption.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces R\IeC {\'e}partition du chiffre d'affaires par secteur d'activit\IeC {\'e}\relax }}{9}{figure.caption.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.3}{\ignorespaces \IeC {\'E}volution du chiffre d'affaires\relax }}{11}{figure.caption.6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.3}Les autres entit\IeC {\'e}s du groupe}{12}{subsection.1.1.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}L'organisation de l'entreprise}{12}{section.1.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}Le service \IeC {\'e}quitable - La charte Excilys{}}{12}{subsection.1.2.1}}
 \citation{capico}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces Le service \IeC {\'e}quitable\relax }}{9}{figure.caption.7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.2}Le syst\IeC {\`e}me d'information du groupe}{9}{subsection.1.2.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.5}{\ignorespaces Syst\IeC {\`e}me d'information du groupe Excilys{}\relax }}{10}{figure.caption.8}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {2}Pr\IeC {\'e}sentation du stage}{11}{chapter.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces Le service \IeC {\'e}quitable\relax }}{13}{figure.caption.7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.2}Le syst\IeC {\`e}me d'information du groupe}{14}{subsection.1.2.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.5}{\ignorespaces Syst\IeC {\`e}me d'information du groupe Excilys{}\relax }}{15}{figure.caption.8}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Pr\IeC {\'e}sentation du stage}{16}{chapter.2}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {2.1}Sujet du stage}{11}{section.2.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}La formation}{11}{section.2.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Gatling}{12}{section.2.3}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Travail effectu\IeC {\'e}}{13}{chapter.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Sujet du stage}{16}{section.2.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}La formation}{16}{section.2.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Gatling}{17}{section.2.3}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Travail effectu\IeC {\'e}}{18}{chapter.3}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@input{chapitres/4_travail/1_formation.aux}
 \@input{chapitres/4_travail/2_ebanking.aux}
 \@input{chapitres/4_travail/3_gatling.aux}
-\@writefile{toc}{\contentsline {chapter}{Conclusion}{48}{chapter*.70}}
+\@writefile{toc}{\contentsline {chapter}{Conclusion}{57}{chapter*.70}}
 \bibcite{excilys}{1}
 \bibcite{capico}{2}
 \bibcite{jelastic}{3}
@@ -78,31 +81,31 @@
 \bibcite{jelly}{25}
 \bibcite{jqplot}{26}
 \bibcite{gatlingplugin}{27}
-\@writefile{toc}{\contentsline {chapter}{Bibliographie}{49}{chapter*.71}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Charte Excilys{}}{50}{appendix.A}}
+\@writefile{toc}{\contentsline {chapter}{Bibliographie}{58}{chapter*.71}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Charte Excilys{}}{59}{appendix.A}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ann:charte}{{A}{50}{Charte \excilys {}\relax }{appendix.A}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {B}Test de charge de MF Banking}{52}{appendix.B}}
+\newlabel{ann:charte}{{A}{59}{Charte \excilys {}\relax }{appendix.A}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}Test de charge de MF Banking}{61}{appendix.B}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ann:gatling}{{B}{52}{Test de charge de MF Banking\relax }{appendix.B}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {B.1}{\ignorespaces Stastiques globales du test : nombre de requ\IeC {\^e}tes r\IeC {\'e}ussies et \IeC {\'e}chou\IeC {\'e}es et d\IeC {\'e}tails du temps de r\IeC {\'e}ponse\relax }}{52}{figure.caption.72}}
-\@writefile{lof}{\contentsline {figure}{\numberline {B.2}{\ignorespaces On peut voir que presque toutes les requ\IeC {\^e}tes ont \IeC {\'e}t\IeC {\'e} effectu\IeC {\'e}s en moins de 800 ms\relax }}{52}{figure.caption.73}}
-\@writefile{lof}{\contentsline {figure}{\numberline {B.3}{\ignorespaces Nombres d'utilisateurs actifs simultan\IeC {\'e}ment. La mont\IeC {\'e}e progressive du nombres d'utilisateurs au d\IeC {\'e}but est d\IeC {\^u} \IeC {\`a} une \textit  {rampe} : on demande \IeC {\`a} Gatling de prendre 30 secondes pour lancer progressivement les 1000 utilisateurs du test\relax }}{53}{figure.caption.74}}
-\@writefile{lof}{\contentsline {figure}{\numberline {B.4}{\ignorespaces Distribution du temps de r\IeC {\'e}ponse : on peut voir que la majorit\IeC {\'e} des requ\IeC {\^e}tes ont \IeC {\'e}t\IeC {\'e} \IeC {\'e}t\IeC {\'e} effectu\IeC {\'e}s quasi instantan\IeC {\'e}ment et que le nombre de requ\IeC {\^e}tes lentes est tellement faible qu'elles n'apparaissent m\IeC {\^e}me pas sur le graphe\relax }}{53}{figure.caption.75}}
-\@writefile{lof}{\contentsline {figure}{\numberline {B.5}{\ignorespaces Nombre de requ\IeC {\^e}tes qui d\IeC {\'e}marrent par seconde : on observe qu'une fois la rampe termin\IeC {\'e}e, le syst\IeC {\`e}me se maintient sans difficult\IeC {\'e} entre 800 et 1200 requ\IeC {\^e}tes par seconde\relax }}{54}{figure.caption.76}}
-\@writefile{lof}{\contentsline {figure}{\numberline {B.6}{\ignorespaces Nombre de transactions (requ\IeC {\^e}tes qui s'ach\IeC {\`e}vent) par seconde : m\IeC {\^e}mes observations que pour les requ\IeC {\^e}tes, le syst\IeC {\`e}me se maintient durant tout le test entre 800 et 1200 transactions par seconde\relax }}{54}{figure.caption.77}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {C}Impact des solutions de monitoring}{55}{appendix.C}}
+\newlabel{ann:gatling}{{B}{61}{Test de charge de MF Banking\relax }{appendix.B}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.1}{\ignorespaces Stastiques globales du test : nombre de requ\IeC {\^e}tes r\IeC {\'e}ussies et \IeC {\'e}chou\IeC {\'e}es et d\IeC {\'e}tails du temps de r\IeC {\'e}ponse\relax }}{61}{figure.caption.72}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.2}{\ignorespaces On peut voir que presque toutes les requ\IeC {\^e}tes ont \IeC {\'e}t\IeC {\'e} effectu\IeC {\'e}s en moins de 800 ms\relax }}{62}{figure.caption.73}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.3}{\ignorespaces Nombres d'utilisateurs actifs simultan\IeC {\'e}ment. La mont\IeC {\'e}e progressive du nombres d'utilisateurs au d\IeC {\'e}but est d\IeC {\^u} \IeC {\`a} une \textit  {rampe} : on demande \IeC {\`a} Gatling de prendre 30 secondes pour lancer progressivement les 1000 utilisateurs du test\relax }}{63}{figure.caption.74}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.4}{\ignorespaces Distribution du temps de r\IeC {\'e}ponse : on peut voir que la majorit\IeC {\'e} des requ\IeC {\^e}tes ont \IeC {\'e}t\IeC {\'e} \IeC {\'e}t\IeC {\'e} effectu\IeC {\'e}s quasi instantan\IeC {\'e}ment et que le nombre de requ\IeC {\^e}tes lentes est tellement faible qu'elles n'apparaissent m\IeC {\^e}me pas sur le graphe\relax }}{64}{figure.caption.75}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.5}{\ignorespaces Nombre de requ\IeC {\^e}tes qui d\IeC {\'e}marrent par seconde : on observe qu'une fois la rampe termin\IeC {\'e}e, le syst\IeC {\`e}me se maintient sans difficult\IeC {\'e} entre 800 et 1200 requ\IeC {\^e}tes par seconde\relax }}{65}{figure.caption.76}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.6}{\ignorespaces Nombre de transactions (requ\IeC {\^e}tes qui s'ach\IeC {\`e}vent) par seconde : m\IeC {\^e}mes observations que pour les requ\IeC {\^e}tes, le syst\IeC {\`e}me se maintient durant tout le test entre 800 et 1200 transactions par seconde\relax }}{66}{figure.caption.77}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {C}Impact des solutions de monitoring}{67}{appendix.C}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ann:benchmark}{{C}{55}{Impact des solutions de monitoring\relax }{appendix.C}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {C.1}{\ignorespaces Analyse de l'impact de diff\IeC {\'e}rentes solutions de monitoring sur le serveur test\IeC {\'e} et sur Gatling.\relax }}{55}{figure.caption.78}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {D}UI du Gatling Jenkins Plugin}{56}{appendix.D}}
+\newlabel{ann:benchmark}{{C}{67}{Impact des solutions de monitoring\relax }{appendix.C}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {C.1}{\ignorespaces Analyse de l'impact de diff\IeC {\'e}rentes solutions de monitoring sur le serveur test\IeC {\'e} et sur Gatling.\relax }}{67}{figure.caption.78}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {D}UI du Gatling Jenkins Plugin}{68}{appendix.D}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ann:jenkins}{{D}{56}{UI du Gatling Jenkins Plugin\relax }{appendix.D}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {D.1}{\ignorespaces Configuration du plugin dans la configuration d'un projet Jenkins. Possibilit\IeC {\'e} de d\IeC {\'e}clarer une liste de conditions d'\IeC {\'e}chec et d'instabilit\IeC {\'e} du \textit  {build}.\relax }}{56}{figure.caption.79}}
-\@writefile{lof}{\contentsline {figure}{\numberline {D.2}{\ignorespaces Int\IeC {\'e}gration Gatling dans le dashboard d'un projet.\relax }}{57}{figure.caption.80}}
-\@writefile{lof}{\contentsline {figure}{\numberline {D.3}{\ignorespaces Graphiques permettant de suivre l'\IeC {\'e}volution des performances du projet.\relax }}{57}{figure.caption.81}}
-\@writefile{lof}{\contentsline {figure}{\numberline {D.4}{\ignorespaces Int\IeC {\'e}gration du rapport Gatling dans la page du build.\relax }}{58}{figure.caption.82}}
+\newlabel{ann:jenkins}{{D}{68}{UI du Gatling Jenkins Plugin\relax }{appendix.D}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {D.1}{\ignorespaces Configuration du plugin dans la configuration d'un projet Jenkins. Possibilit\IeC {\'e} de d\IeC {\'e}clarer une liste de conditions d'\IeC {\'e}chec et d'instabilit\IeC {\'e} du \textit  {build}.\relax }}{68}{figure.caption.79}}
+\@writefile{lof}{\contentsline {figure}{\numberline {D.2}{\ignorespaces Int\IeC {\'e}gration Gatling dans le dashboard d'un projet.\relax }}{69}{figure.caption.80}}
+\@writefile{lof}{\contentsline {figure}{\numberline {D.3}{\ignorespaces Graphiques permettant de suivre l'\IeC {\'e}volution des performances du projet.\relax }}{69}{figure.caption.81}}
+\@writefile{lof}{\contentsline {figure}{\numberline {D.4}{\ignorespaces Int\IeC {\'e}gration du rapport Gatling dans la page du build.\relax }}{70}{figure.caption.82}}

@@ -44,7 +44,7 @@ XP est une méthode Agile utilisée dans le développement logiciel assez proche
 
 XP s'appuie notamment sur le pair programming qui consiste à travailler en binôme sur un même ordinateur avec un \emph{pilote} qui contrôle le clavier et la souris et un \emph{copilote} qui a plus de recul et aide le \emph{pilote}. Régulièrement, les rôles s'inversent.\\
 
-Un autre principe de cette méthode est le Test Driven Development (TDD). TDD vise à rendre le développement plus simple et efficace en écrivant d'abord les tests permettant de garantir qu'une fonctionnalité a été développée puis de développer la fonctionnalité. L'idée est de simplement écrire le code qui garantie que les tests passent. Cette méthodologie vise à écrire du code de qualité et fonctionnellement correct, et de faciliter la maintenance de celui-ci. 
+Un autre principe de cette méthode est le Test Driven Development (TDD). TDD vise à rendre le développement plus simple et efficace en écrivant d'abord les tests permettant de garantir qu'une fonctionnalité a été développée puis en développant la fonctionnalité. L'idée est de simplement écrire le code qui garantit que les tests passent. Cette méthodologie vise à écrire du code de qualité et fonctionnellement correct, et à faciliter la maintenance de celui-ci. 
 
 \subsubsection{Maven}
 
@@ -54,7 +54,7 @@ Maven \cite{maven} est un outil de gestion et de construction de projets Java. U
 
 Java \cite{java} est un langage de programmation orienté objet développé par Sun Microsystems (racheté par Oracle Corporation). Il est vraisemblablement le langage les plus utilisé en entreprise. C'est un langage compilé qui s'exécute sur une machine virtuelle appelée Java Virtual Machine (JVM), ce qui permet aux applications Java d'être portables puisque seule la JVM dépend du système d'exploitation.\\
 
-Un des principe fondamental de Java qui fait de lui un langage très apprécié des entreprise est la garantie de la rétro-compatibilité entre différentes versions de Java. Ainsi une application développée en Java 1.4 peut fonctionner sur une JVM Java 7, profitant ainsi des améliorations apportées à celle-ci.
+Un des principes fondamentaux de Java qui fait de lui un langage très apprécié des entreprise est la garantie de la rétro-compatibilité entre différentes versions de Java. Ainsi une application développée en Java 1.4 peut fonctionner sur une JVM Java 7, profitant ainsi des améliorations apportées à celle-ci.
 
 \subsubsection{JUnit}
 
@@ -67,8 +67,8 @@ JEE \cite{jee} est une plateforme de développement d'applications d'entreprise 
 \begin{description}
 	\item[Servlets] objets Java capable de répondre à des requêtes HTTP,
 	\item[Java Server Pages (JSP)] langage permettant de générer dynamiquement des pages HTML en s'interfaçant facilement avec du code Java,
-	\item[Java Persistence API (JPA)] API inspirée d'Hibernate, permettant de persister dans une base de données relationnelle des objets Java,
-	\item[Entreprise JavaBean (EJB)] architecture coté serveur servant à créer des composants distribuées.
+	\item[Java Persistence API (JPA)] API inspirée d'Hibernate, permettant de rendre persistant dans une base de données relationnelles des objets Java,
+	\item[Entreprise JavaBean (EJB)] architecture coté serveur servant à créer des composants distribués.
 \end{description}
 
 \subsubsection{Java DataBase Connectivity (JDBC)}
@@ -83,14 +83,14 @@ Hibernate \cite{hibernate} est un framework d'Object Relational Mapping (ORM), c
 
 Le framework Spring \cite{spring} est une alternative et un concurrent à la plateforme JEE. L'idée est de proposer au développeur un ensemble de fonctionnalités à la manière de JEE mais sous la forme de dépendances modulaires. Ainsi, une application Spring peut fonctionner sur une simple JVM ou sur un serveur léger tel que Tomcat ou Jetty. Au contraire d'une application JEE qui se déploie uniquement dans un conteneur lourd, ou serveur d'application, tel que Glassfish ou JBoss implémentant toutes les JSR de la spécification JEE. Les applications JEE sont extrêmement dépendantes du conteneur ce qui restreint la portabilité de l'application, à la différence d'une application Spring.\\
 
-Le c\oe{}ur de Spring est une implémentation du design pattern Inversion of Control (IoC) : l'instanciation des classes n'est plus à la charge du développeur mais du framework. Ceci permet ainsi de l'injection de dépendance, c'est à dire, d'automatiquement injecter à l'exécution les dépendances d'un objets lors de son instanciation. On peut donc modifier le comportement de l'application à l'exécution. Tous les modules de Spring reposent sur cette fonctionnalité. La déclaration des instances gérées par Spring se fait via un fichier XML ou via des annotations directement dans le code. On peut donc voir Spring comme une fabrique d'objets (design pattern Factory).\\
+Le c\oe{}ur de Spring est une implémentation du design pattern Inversion of Control (IoC) : l'instanciation des classes n'est plus à la charge du développeur mais du framework. Ceci permet ainsi de l'injection de dépendance, c'est à dire, d'automatiquement injecter à l'exécution les dépendances d'un objet lors de son instanciation. On peut donc modifier le comportement de l'application à l'exécution. Tous les modules de Spring reposent sur cette fonctionnalité. La déclaration des instances gérées par Spring se fait via un fichier XML ou via des annotations directement dans le code. On peut donc voir Spring comme une fabrique d'objets (design pattern Factory).\\
 
 De nombreux modules font de Spring une énorme boite à outils : intégration avec un ORM (Hibernate, JPA, \dots), programmation orientée aspect (AOP), implémentation du design pattern MVC pour faciliter la création d'application web, intégration dans les frameworks de tests unitaires (JUnit), \dots
 
 \subsection{Formation continue}
 
-Après la phase de formation du stage terminée, j'ai ,parallèlement au travail demandé, continué et approfondi plusieurs sujets pour ma curiosité personnelle mais aussi parce que c'est un des devoirs d'un consultant du \excilysGroup{}.\\
+Après la phase de formation du stage terminée, j'ai, parallèlement au travail demandé, continué et approfondi plusieurs sujets pour ma curiosité personnelle mais aussi parce que c'est un des devoirs d'un consultant du \excilysGroup{}.\\
 
-En premier lieu, j'ai approfondi mes connaissances en Java pure pour notamment pouvoir passer l'examen d'Oracle Certified Java SE 6 Programmer (OCJP). Cet examen permet d'être certifié par Oracle comme \flqq{}maîtrisant le langage Java\frqq{} si le score obtenu est supérieur à 61 \%. Cette certification est nécessaire pour être embauché dans le \excilysGroup{}. J'ai obtenu la note de 91 \%.\\
+En premier lieu, j'ai approfondi mes connaissances en Java pur pour notamment pouvoir passer l'examen d'Oracle Certified Java SE 6 Programmer (OCJP). Cet examen permet d'être certifié par Oracle comme \flqq{}maîtrisant le langage Java\frqq{} si le score obtenu est supérieur à 61 \%. Cette certification est nécessaire pour être embauché dans le \excilysGroup{}. J'ai obtenu la note de 91 \%.\\
 
 En second lieu, je me suis aussi intéressé à des technologies émergentes comme Scala, Play! 2 ou bien Gradle.
